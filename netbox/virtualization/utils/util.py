@@ -1,6 +1,7 @@
 import re
 import math
 from difflib import SequenceMatcher
+import paramiko
 
 def extract_sn(sn: str) -> str:
     """
@@ -46,32 +47,6 @@ def convert_size(size_bytes):
 def sort_by_dict_value(l: list) -> list:
     return sorted(l, key=lambda x: x['name'])
 
-def run_remote_command(host, port, username, password, cmds: list, ) -> tuple:
-    """
-    Run remote command
-
-    :param host:
-    :param port:
-    :param username:
-    :param password:
-    :param cmds:
-    :return: A tuple with 'host' as 1st element, and 2nd element for result of every command in 'cmds' as value(list)
-    """
-
-    try:
-        client = paramiko.SSHClient()
-        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        client.connect(hostname=host, port=port, username=username, password=password)
-
-        result = []
-        for cmd in cmds:
-            _, stdout, stderr = client.exec_command(cmd)
-            if stdout:
-                result.append(stdout.read().decode().strip())
-        return (host, result)
-    except Exception as err:
-        print(f"[run_remote_command]:{err}")
-        return ()
 
 def get_auth_from_comments(comments: str) -> tuple:
     li = re.split(r'[\r\n]+',  comments)
@@ -82,3 +57,44 @@ def get_auth_from_comments(comments: str) -> tuple:
 
 def get_similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a, b).ratio()
+
+def run_remote_command(host, port, username, password, cmds: list, ) -> list:
+    """
+    Run remote command
+
+    :param host:
+    :param port:
+    :param username:
+    :param password:
+    :param cmds:
+    :return: A tuple with 'host' as 0st element, and 2nd element for result of every command in 'cmds' as value(list)
+    [
+        {
+            "cmd": "command",
+            "stdout": "hello",
+            "stderr": "error,
+        }
+        ...
+    ]
+    """
+
+    result = []
+    try:
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(hostname=host, port=port, username=username, password=password)
+
+        for cmd in cmds:
+            info = {
+                'cmd': cmd
+            }
+            _, stdout, stderr = client.exec_command(cmd)
+            if stdout:
+                info['stdout'] = stdout.read().decode().strip()
+            if stderr:
+                info['stderr'] = stderr.read().decode().strip()
+            result.append(info)
+        return result
+    except Exception as err:
+        print(f"[run_remote_command]:{err}")
+        return result

@@ -32,6 +32,7 @@ from .mixins import ActionsMixin, TableMixin
 from .utils import get_prerequisite_model
 from virtualization.utils.vmware import sync_vmware
 from virtualization.utils.xen import sync_xen
+from virtualization.utils.kvm import sync_kvm
 from virtualization.utils.util import get_auth_from_comments
 from virtualization.models import VirtualMachine
 
@@ -949,7 +950,7 @@ class BulkSyncVmView(GetReturnURLMixin, BaseMultiObjectView):
                             elif  cluster_type == "xen":
                                 vms = sync_xen(obj.name, username, password)
                             else:
-                                print("kvm?")
+                                vms = sync_kvm(obj.name, username, password)
 
                             if len(vms) == 0:
                                 msg = f"Sync {sync_count} {model._meta.verbose_name_plural} failed"
