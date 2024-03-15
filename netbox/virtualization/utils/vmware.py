@@ -92,14 +92,17 @@ def get_vcenter_info(host: str, username: str, password: str):
     :return:
     """
     items = []
-    with get_vsphere_objects(vim.HostSystem, host=host, username=username, password=password) as objects:
-        for obj in sorted(objects, key=lambda x: x.name):
-            esxi = _extract_esxi_info(obj)
-            vms = []
-            for vm in sorted(obj.vm, key=lambda x: x.name):
-                vms.append(_extract_vm_info(vm))
-            esxi["vms"] = vms
-            items.append(esxi)
+    try:
+        with get_vsphere_objects(vim.HostSystem, host=host, username=username, password=password) as objects:
+            for obj in sorted(objects, key=lambda x: x.name):
+                esxi = _extract_esxi_info(obj)
+                vms = []
+                for vm in sorted(obj.vm, key=lambda x: x.name):
+                    vms.append(_extract_vm_info(vm))
+                esxi["vms"] = vms
+                items.append(esxi)
+    except RuntimeError as err:
+        print(f"get_vmware_infrastructure_info: {str(err)}")
     return items
 
 

@@ -944,22 +944,29 @@ class BulkSyncVmView(GetReturnURLMixin, BaseMultiObjectView):
                                 continue
                             logger.debug(f"Sync VMs for cluster {obj.name}")
 
-
-
                             if  cluster_type == "vmware":
                                 vms = sync_vmware(obj.name, username, password)
-                                for vm in vms:
-                                    vm_instance = VirtualMachine()
-                                    vm_instance.name = vm['name']
-                                    vm_instance.status = vm['status']
-                                    vm_instance.vcpus = vm['vcpus']
-                                    vm_instance.memory = vm['memory']
-                                    vm_instance.cluster = obj
-                                    vm_instance.save()
                             elif  cluster_type == "xen":
-                                sync_xen()
+                                vms = sync_xen(obj.name, username, password)
                             else:
                                 print("kvm?")
+
+                            if len(vms) == 0:
+                                msg = f"Sync {sync_count} {model._meta.verbose_name_plural} failed"
+                                logger.info(msg)
+                                messages.error(request, msg)
+                                return redirect(self.get_return_url(request))
+
+                            for vm in vms:
+                                vm_instance = VirtualMachine()
+                                vm_instance.name = vm['name']
+                                vm_instance.status = vm['status']
+                                if vm.get('vcpus', 0):
+                                    vm_instance.vcpus = vm['vcpus']
+                                if vm.get('memory', 0):
+                                    vm_instance.memory = vm['memory']
+                                vm_instance.cluster = obj
+                                vm_instance.save()
 
 
                 except (ProtectedError, RestrictedError) as e:
