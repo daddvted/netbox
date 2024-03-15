@@ -30,11 +30,16 @@ from utilities.views import GetReturnURLMixin
 from .base import BaseMultiObjectView
 from .mixins import ActionsMixin, TableMixin
 from .utils import get_prerequisite_model
+from virtualization.utils.vmware import sync_vmware
+from virtualization.utils.xen import sync_xen
+from virtualization.utils.util import get_auth_from_comments
+from virtualization.models import VirtualMachine
 
 __all__ = (
     'BulkComponentCreateView',
     'BulkCreateView',
     'BulkDeleteView',
+    'BulkSyncVmView',
     'BulkEditView',
     'BulkImportView',
     'BulkRenameView',
@@ -858,6 +863,142 @@ class BulkDeleteView(GetReturnURLMixin, BaseMultiObjectView):
             **self.get_extra_context(request),
         })
 
+
+class BulkSyncVmView(GetReturnURLMixin, BaseMultiObjectView):
+    """
+    Sync objects in bulk.
+
+    Attributes:
+        filterset: FilterSet to apply when synchronizing by QuerySet
+        table: The table used to display devices being synchronized
+    """
+    template_name = 'virtualization/cluster_sync_vm.html'
+    filterset = None
+    table = None
+
+    def get_required_permission(self):
+        return get_permission_for_model(self.queryset.model, 'sync')
+
+    def get_form(self):
+        """
+        Provide a standard bulk sync form if none has been specified for the view
+        """
+        class BulkSyncVmForm(ConfirmationForm):
+            pk = ModelMultipleChoiceField(queryset=self.queryset, widget=MultipleHiddenInput)
+
+        return BulkSyncVmForm
+
+    #
+    # Request handlers
+    #
+
+    def get(self, request):
+        return redirect(self.get_return_url(request))
+
+    def post(self, request, **kwargs):
+        logger = logging.getLogger('netbox.views.BulkSyncVmView')
+        model = self.queryset.model
+
+        # Are we synchronizing *all* objects in the queryset or just a selected subset?
+        if request.POST.get('_all'):
+            qs = model.objects.all()
+            if self.filterset is not None:
+                qs = self.filterset(request.GET, qs, request=request).qs
+            pk_list = qs.only('pk').values_list('pk', flat=True)
+        else:
+            pk_list = [int(pk) for pk in request.POST.getlist('pk')]
+
+        form_cls = self.get_form()
+
+        if '_confirm' in request.POST:
+            form = form_cls(request.POST)
+            if form.is_valid():
+                logger.debug("Form validation was successful")
+
+                # Synchronize VMs for objects(Cluster)
+                queryset = self.queryset.filter(pk__in=pk_list)
+                sync_count = queryset.count()
+                try:
+                    with transaction.atomic():
+                        for obj in queryset:
+                            # Take a snapshot of change-logged models
+                            if hasattr(obj, 'snapshot'):
+                                obj.snapshot()
+
+                            # obj.delete()
+                            # ====================================
+                            # Add logical here to synchronize 
+                            # VMs for Clusters
+                            # By Ted
+                            # ====================================
+                            cluster_type = obj.type.name.lower()
+
+                            vm_qs = VirtualMachine.objects.restrict(request.user, 'view').filter(cluster=obj)
+                            vm_qs.delete()
+                            logger.info(f'{vm_qs.count()} VMs in cluster({obj.name}) deleted')
+
+
+                            username, password = get_auth_from_comments(obj.comments)
+                            if not username or not password:
+                                logger.error(f"Username or password not found in comments of cluster {obj.name}")
+                                continue
+                            logger.debug(f"Sync VMs for cluster {obj.name}")
+
+
+
+                            if  cluster_type == "vmware":
+                                vms = sync_vmware(obj.name, username, password)
+                                for vm in vms:
+                                    vm_instance = VirtualMachine()
+                                    vm_instance.name = vm['name']
+                                    vm_instance.status = vm['status']
+                                    vm_instance.vcpus = vm['vcpus']
+                                    vm_instance.memory = vm['memory']
+                                    vm_instance.cluster = obj
+                                    vm_instance.save()
+                            elif  cluster_type == "xen":
+                                sync_xen()
+                            else:
+                                print("kvm?")
+
+
+                except (ProtectedError, RestrictedError) as e:
+                    logger.info(f"Caught {type(e)} while attempting to sychronize cluster objects")
+                    handle_protectederror(queryset, request, e)
+                    return redirect(self.get_return_url(request))
+
+                except AbortRequest as e:
+                    logger.debug(e.message)
+                    messages.error(request, mark_safe(e.message))
+                    return redirect(self.get_return_url(request))
+
+                msg = f"Sync {sync_count} {model._meta.verbose_name_plural}"
+                logger.info(msg)
+                messages.success(request, msg)
+                return redirect(self.get_return_url(request))
+
+            else:
+                logger.debug("Form validation failed")
+
+        else:
+            form = form_cls(initial={
+                'pk': pk_list,
+                'return_url': self.get_return_url(request),
+            })
+
+        # Retrieve objects being deleted
+        table = self.table(self.queryset.filter(pk__in=pk_list), orderable=False)
+        if not table.rows:
+            messages.warning(request, "No {} were selected for Synchronization.".format(model._meta.verbose_name_plural))
+            return redirect(self.get_return_url(request))
+
+        return render(request, self.template_name, {
+            'model': model,
+            'form': form,
+            'table': table,
+            'return_url': self.get_return_url(request),
+            **self.get_extra_context(request),
+        })
 
 #
 # Device/VirtualMachine components

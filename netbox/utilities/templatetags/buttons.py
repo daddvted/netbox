@@ -10,6 +10,7 @@ __all__ = (
     'bookmark_button',
     'bulk_delete_button',
     'bulk_edit_button',
+    'bulk_sync_vm_button',
     'clone_button',
     'delete_button',
     'edit_button',
@@ -166,6 +167,20 @@ def bulk_edit_button(model, action='bulk_edit', query_params=None):
 
 @register.inclusion_tag('buttons/bulk_delete.html')
 def bulk_delete_button(model, action='bulk_delete', query_params=None):
+    try:
+        url = reverse(get_viewname(model, action))
+        if query_params:
+            url = f'{url}?{query_params.urlencode()}'
+    except NoReverseMatch:
+        url = None
+
+    return {
+        'url': url,
+    }
+
+# Bulk Synchronization Button to synchronize VM for clusters. 
+@register.inclusion_tag('buttons/bulk_sync_vm.html')
+def bulk_sync_vm_button(model, action='bulk_sync_vm', query_params=None):
     try:
         url = reverse(get_viewname(model, action))
         if query_params:

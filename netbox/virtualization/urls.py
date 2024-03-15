@@ -28,6 +28,7 @@ urlpatterns = [
     path('clusters/import/', views.ClusterBulkImportView.as_view(), name='cluster_import'),
     path('clusters/edit/', views.ClusterBulkEditView.as_view(), name='cluster_bulk_edit'),
     path('clusters/delete/', views.ClusterBulkDeleteView.as_view(), name='cluster_bulk_delete'),
+    path('clusters/sync/', views.ClusterBulkSyncVmView.as_view(), name='cluster_bulk_sync_vm'),
     path('clusters/<int:pk>/', include(get_model_urls('virtualization', 'cluster'))),
 
     # Virtual machines

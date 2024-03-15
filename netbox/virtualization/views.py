@@ -165,6 +165,15 @@ class ClusterListView(generic.ObjectListView):
     table = tables.ClusterTable
     filterset = filtersets.ClusterFilterSet
     filterset_form = forms.ClusterFilterForm
+    template_name = 'virtualization/cluster_list.html'
+    actions = {
+        'add': {'add'},
+        'import': {'add'},
+        'export': {'view'},
+        'bulk_edit': {'change'},
+        'bulk_delete': {'delete'},
+        'bulk_sync_vm': {'sync_vm'},
+    }
 
 
 @register_model_view(Cluster)
@@ -245,6 +254,14 @@ class ClusterBulkDeleteView(generic.BulkDeleteView):
     queryset = Cluster.objects.all()
     filterset = filtersets.ClusterFilterSet
     table = tables.ClusterTable
+    
+
+class ClusterBulkSyncVmView(generic.BulkSyncVmView):
+    queryset = Cluster.objects.all()
+    child_model = VirtualMachine
+    filterset = filtersets.ClusterFilterSet
+    table = tables.ClusterTable
+
 
 
 @register_model_view(Cluster, 'add_devices', path='devices/add')

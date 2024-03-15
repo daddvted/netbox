@@ -1,0 +1,51 @@
+{% extends 'base/layout.html' %}
+{% load helpers %}
+{% load render_table from django_tables2 %}
+{% load i18n %}
+
+{% comment %}
+Blocks:
+  message_extra: Supplementary warning message content
+
+Context:
+  model: The model class of the objects being deleted
+  form: The bulk delete form class
+  table: The table class for rendering list of objects being deleted
+  return_url: The URL to which the user is redirected after submitting the form
+{% endcomment %}
+
+{% block title %}
+  {% trans "Synchronize" %} {{ table.rows|length }} {{ model|meta:"verbose_name_plural"|bettertitle }}?
+{% endblock %}
+
+{% block content %}
+  <div class="container-md px-0">
+    <div class="alert alert-danger mb-3" role="alert">
+      <h4 class="alert-heading">{% trans "Confirm Bulk VM Synchronization" %}</h4>
+      <hr />
+      <strong>{% trans "Warning" context "Noun" %}:</strong>
+      {% blocktrans trimmed with count=table.rows|length type_plural=model|meta:"verbose_name_plural" %}
+        The following operation will delete all VMs and re-synchronize VMs from <strong>{{ count }}</strong> {{ type_plural }}. Please
+        carefully review the objects to be deleted and confirm below.
+      {% endblocktrans %}
+      {% block message_extra %}{% endblock %}
+    </div>
+  </div>
+  <div class="container-xl px-0">
+    <div class="table-responsive">
+      {% render_table table 'inc/table.html' %}
+    </div>
+    <div class="row mt-3">
+      <form action="" method="post">
+        {% csrf_token %}
+        {% for field in form.hidden_fields %}
+          {{ field }}
+        {% endfor %}
+        <div class="text-end">
+          <button type="submit" name="_confirm" class="btn btn-danger">{% trans "Synchronize" %} {{ table.rows|length }} {{ model|meta:"verbose_name_plural" }}</button>
+          <a href="{{ return_url }}" class="btn btn-outline-dark">{% trans "Cancel" %}</a>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock content %}
