@@ -722,6 +722,7 @@ RQ_QUEUES.update({
 
 LANGUAGES = (
     ('en', _('English')),
+    ('zh', _('Chinese')),
     ('es', _('Spanish')),
     ('fr', _('French')),
     ('ja', _('Japanese')),
