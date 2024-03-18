@@ -176,7 +176,7 @@ STORAGE_BACKEND = getattr(configuration, 'STORAGE_BACKEND', None)
 STORAGE_CONFIG = getattr(configuration, 'STORAGE_CONFIG', {})
 TIME_FORMAT = getattr(configuration, 'TIME_FORMAT', 'g:i a')
 TIME_ZONE = getattr(configuration, 'TIME_ZONE', 'UTC')
-ENABLE_LOCALIZATION = getattr(configuration, 'ENABLE_LOCALIZATION', False)
+ENABLE_LOCALIZATION = getattr(configuration, 'ENABLE_LOCALIZATION', True)
 CHANGELOG_SKIP_EMPTY_CHANGES = getattr(configuration, 'CHANGELOG_SKIP_EMPTY_CHANGES', True)
 
 # Check for hard-coded dynamic config parameters
