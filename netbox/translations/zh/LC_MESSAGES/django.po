@@ -1656,7 +1656,7 @@ msgstr ""
 #: templates/extras/journalentry.html:21 templates/extras/objectchange.html:62
 #: tenancy/tables/contacts.py:93 vpn/tables/l2vpn.py:64
 msgid "Object"
-msgstr ""
+msgstr "对象"
 
 #: core/tables/jobs.py:35
 msgid "Interval"
@@ -2310,7 +2310,7 @@ msgstr ""
 #: templates/dcim/virtualchassis_add.html:8
 #: templates/dcim/virtualchassis_edit.html:25
 msgid "Virtual Chassis"
-msgstr ""
+msgstr "虚拟机箱"
 
 #: dcim/filtersets.py:1335
 msgid "Module (ID)"
@@ -3579,7 +3579,7 @@ msgstr ""
 #: dcim/forms/filtersets.py:1245 dcim/forms/model_forms.py:1484
 #: templates/dcim/virtualdevicecontext.html:16
 msgid "Virtual Device Context"
-msgstr ""
+msgstr "虚拟设备上下文"
 
 #: dcim/forms/filtersets.py:1248 extras/forms/bulk_edit.py:315
 #: extras/forms/bulk_import.py:239 extras/forms/filtersets.py:479
@@ -5976,7 +5976,7 @@ msgstr ""
 
 #: extras/dashboard/widgets.py:211
 msgid "Object List"
-msgstr ""
+msgstr "对象列表"
 
 #: extras/dashboard/widgets.py:212
 msgid "Display an arbitrary list of objects."
@@ -6197,7 +6197,7 @@ msgstr ""
 #: extras/forms/filtersets.py:259 extras/forms/model_forms.py:47
 #: extras/forms/model_forms.py:223 tenancy/forms/filtersets.py:91
 msgid "Object type"
-msgstr ""
+msgstr "对象类型"
 
 #: extras/forms/bulk_import.py:47
 msgid "Object type (for object or multi-object fields)"
@@ -8060,7 +8060,7 @@ msgstr ""
 
 #: ipam/forms/model_forms.py:256 templates/ipam/iprange.html:11
 msgid "IP Range"
-msgstr ""
+msgstr "IP范围"
 
 #: ipam/forms/model_forms.py:285 ipam/forms/model_forms.py:440
 #: templates/ipam/fhrpgroup.html:19 templates/ipam/ipaddress_edit.html:52
@@ -8563,7 +8563,7 @@ msgstr ""
 
 #: ipam/tables/ip.py:170 netbox/navigation/menu.py:149
 msgid "IP Ranges"
-msgstr ""
+msgstr "IP范围"
 
 #: ipam/tables/ip.py:220
 msgid "Prefix (Flat)"
@@ -8999,15 +8999,15 @@ msgstr "租户组"
 
 #: netbox/navigation/menu.py:48
 msgid "Contact Groups"
-msgstr ""
+msgstr "联系人组"
 
 #: netbox/navigation/menu.py:49 templates/tenancy/contactrole.html:8
 msgid "Contact Roles"
-msgstr ""
+msgstr "联系人角色"
 
 #: netbox/navigation/menu.py:50
 msgid "Contact Assignments"
-msgstr ""
+msgstr "联系人分配"
 
 #: netbox/navigation/menu.py:64
 msgid "Modules"
@@ -9020,7 +9020,7 @@ msgstr "设备角色"
 #: netbox/navigation/menu.py:68 templates/dcim/device.html:162
 #: templates/dcim/virtualdevicecontext.html:8
 msgid "Virtual Device Contexts"
-msgstr ""
+msgstr "虚拟设备上下文"
 
 #: netbox/navigation/menu.py:76
 msgid "Manufacturers"
@@ -9028,7 +9028,7 @@ msgstr "厂商"
 
 #: netbox/navigation/menu.py:80
 msgid "Device Components"
-msgstr ""
+msgstr "设备组件"
 
 #: netbox/navigation/menu.py:92 templates/dcim/inventoryitemrole.html:8
 msgid "Inventory Item Roles"
@@ -10180,7 +10180,7 @@ msgstr ""
 
 #: templates/dcim/device.html:153
 msgid "View Virtual Chassis"
-msgstr ""
+msgstr "查看虚拟机箱"
 
 #: templates/dcim/device.html:170
 msgid "Create VDC"
@@ -11478,11 +11478,11 @@ msgstr ""
 
 #: templates/generic/bulk_rename.html:16
 msgid "Current Name"
-msgstr ""
+msgstr "当前名称"
 
 #: templates/generic/bulk_rename.html:17
 msgid "New Name"
-msgstr ""
+msgstr "新名称"
 
 #: templates/generic/bulk_rename.html:40
 #: utilities/templates/widgets/markdown_input.html:11
@@ -11504,12 +11504,12 @@ msgstr ""
 #: templates/generic/object_children.html:27
 #: utilities/templates/buttons/bulk_edit.html:4
 msgid "Edit Selected"
-msgstr ""
+msgstr "编辑所选"
 
 #: templates/generic/object_children.html:41
 #: utilities/templates/buttons/bulk_delete.html:4
 msgid "Delete Selected"
-msgstr ""
+msgstr "删除所选"
 
 #: templates/generic/object_edit.html:19
 #, python-format
@@ -11793,7 +11793,7 @@ msgstr ""
 
 #: templates/ipam/prefix/ip_ranges.html:7
 msgid "Add IP Range"
-msgstr ""
+msgstr "增加IP范围"
 
 #: templates/ipam/prefix_list.html:7
 msgid "Hide Depth Indicators"
@@ -11934,7 +11934,7 @@ msgstr ""
 #: tenancy/forms/forms.py:56 tenancy/forms/model_forms.py:109
 #: tenancy/forms/model_forms.py:132 tenancy/tables/contacts.py:98
 msgid "Contact"
-msgstr ""
+msgstr "联系人"
 
 #: templates/tenancy/contact.html:30 tenancy/forms/bulk_edit.py:98
 msgid "Title"
@@ -11956,33 +11956,33 @@ msgstr ""
 #: templates/tenancy/contactgroup.html:19 tenancy/forms/forms.py:66
 #: tenancy/forms/model_forms.py:76
 msgid "Contact Group"
-msgstr ""
+msgstr "联系人组"
 
 #: templates/tenancy/contactgroup.html:57
 msgid "Add Contact Group"
-msgstr ""
+msgstr "增加联系人组"
 
 #: templates/tenancy/contactrole.html:15 tenancy/filtersets.py:141
 #: tenancy/forms/forms.py:61 tenancy/forms/model_forms.py:90
 msgid "Contact Role"
-msgstr ""
+msgstr "联系人角色"
 
 #: templates/tenancy/object_contacts.html:9
 msgid "Add a contact"
-msgstr ""
+msgstr "增加联系人"
 
 #: templates/tenancy/tenantgroup.html:17
 msgid "Add Tenant"
-msgstr ""
+msgstr "增加租户"
 
 #: templates/tenancy/tenantgroup.html:27 tenancy/forms/model_forms.py:31
 #: tenancy/tables/columns.py:51 tenancy/tables/columns.py:61
 msgid "Tenant Group"
-msgstr ""
+msgstr "租户组"
 
 #: templates/tenancy/tenantgroup.html:66
 msgid "Add Tenant Group"
-msgstr ""
+msgstr "增加租户组"
 
 #: templates/users/group.html:37 templates/users/user.html:65
 msgid "Assigned Permissions"
@@ -11991,7 +11991,7 @@ msgstr ""
 #: templates/users/objectpermission.html:6
 #: templates/users/objectpermission.html:14 users/forms/filtersets.py:67
 msgid "Permission"
-msgstr ""
+msgstr "权限"
 
 #: templates/users/objectpermission.html:33 users/forms/filtersets.py:68
 #: users/forms/model_forms.py:322
@@ -12026,12 +12026,12 @@ msgstr ""
 #: templates/virtualization/cluster.html:64
 #: templates/virtualization/virtualmachine.html:132
 msgid "Memory"
-msgstr ""
+msgstr "内存"
 
 #: templates/virtualization/cluster.html:74
 #: templates/virtualization/virtualmachine.html:143
 msgid "Disk Space"
-msgstr ""
+msgstr "磁盘空间"
 
 #: templates/virtualization/cluster.html:77
 #: templates/virtualization/virtualdisk.html:33
@@ -12042,20 +12042,20 @@ msgstr ""
 
 #: templates/virtualization/cluster/base.html:18
 msgid "Add Virtual Machine"
-msgstr ""
+msgstr "添加虚拟机"
 
 #: templates/virtualization/cluster/base.html:24
 msgid "Assign Device"
-msgstr ""
+msgstr "分配设备"
 
 #: templates/virtualization/cluster/devices.html:10
 msgid "Remove Selected"
-msgstr ""
+msgstr "迁移所选"
 
 #: templates/virtualization/cluster_add_devices.html:9
 #, python-format
 msgid "Add Device to Cluster %(cluster)s"
-msgstr ""
+msgstr "添加设备到 %(cluster)s 群集"
 
 #: templates/virtualization/cluster_add_devices.html:23
 msgid "Device Selection"
