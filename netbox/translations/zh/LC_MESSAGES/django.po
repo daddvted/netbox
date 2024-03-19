@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-16 13:15+0000\n"
+"POT-Creation-Date: 2024-03-18 10:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: circuits/choices.py:22 netbox/navigation/menu.py:290
 msgid "Provisioning"
-msgstr ""
+msgstr "配备"
 
 #: circuits/choices.py:23 dcim/choices.py:22 dcim/choices.py:103
 #: dcim/choices.py:173 dcim/choices.py:219 dcim/choices.py:1500
@@ -247,7 +247,7 @@ msgstr ""
 #: templates/dcim/inc/cable_termination.html:55
 #: templates/dcim/trace/circuit.html:4
 msgid "Circuit"
-msgstr ""
+msgstr "电路"
 
 #: circuits/filtersets.py:256
 msgid "ProviderNetwork (ID)"
@@ -355,7 +355,7 @@ msgstr ""
 #: wireless/forms/bulk_edit.py:28 wireless/forms/bulk_edit.py:81
 #: wireless/forms/bulk_edit.py:128
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: circuits/forms/bulk_edit.py:46 circuits/forms/bulk_edit.py:68
 #: circuits/forms/bulk_edit.py:118 circuits/forms/bulk_import.py:35
@@ -495,7 +495,7 @@ msgstr ""
 #: wireless/forms/filtersets.py:82 wireless/tables/wirelesslan.py:52
 #: wireless/tables/wirelesslink.py:19
 msgid "Status"
-msgstr ""
+msgstr "状态"
 
 #: circuits/forms/bulk_edit.py:137 circuits/forms/bulk_import.py:100
 #: circuits/forms/filtersets.py:119 dcim/forms/bulk_edit.py:120
@@ -776,7 +776,7 @@ msgstr ""
 
 #: circuits/forms/model_forms.py:78 templates/circuits/circuittype.html:20
 msgid "Circuit Type"
-msgstr ""
+msgstr "电路类型"
 
 #: circuits/models/circuits.py:25 dcim/models/cables.py:67
 #: dcim/models/device_component_templates.py:491
@@ -785,15 +785,15 @@ msgstr ""
 #: dcim/models/device_components.py:1166 dcim/models/devices.py:469
 #: dcim/models/racks.py:43 extras/models/tags.py:28
 msgid "color"
-msgstr ""
+msgstr "颜色"
 
 #: circuits/models/circuits.py:34
 msgid "circuit type"
-msgstr ""
+msgstr "电路类型"
 
 #: circuits/models/circuits.py:35
 msgid "circuit types"
-msgstr ""
+msgstr "电路类型"
 
 #: circuits/models/circuits.py:46
 msgid "circuit ID"
@@ -1058,7 +1058,7 @@ msgstr ""
 #: vpn/tables/tunnels.py:40 wireless/tables/wirelesslan.py:18
 #: wireless/tables/wirelesslan.py:79
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: circuits/tables/circuits.py:38 circuits/tables/providers.py:45
 #: circuits/tables/providers.py:79 netbox/navigation/menu.py:254
@@ -1067,11 +1067,11 @@ msgstr ""
 #: templates/circuits/provideraccount.html:46
 #: templates/circuits/providernetwork.html:54
 msgid "Circuits"
-msgstr ""
+msgstr "电路"
 
 #: circuits/tables/circuits.py:52 templates/circuits/circuit.html:27
 msgid "Circuit ID"
-msgstr ""
+msgstr "电路ID"
 
 #: circuits/tables/circuits.py:65 wireless/forms/model_forms.py:157
 msgid "Side A"
@@ -1187,7 +1187,7 @@ msgstr ""
 #: core/data_backends.py:53 templates/account/base.html:17
 #: templates/account/password.html:11 users/forms/model_forms.py:172
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: core/data_backends.py:59
 msgid "Branch"
@@ -1278,7 +1278,7 @@ msgstr ""
 #: templates/core/job.html:25 templates/extras/objectchange.html:56
 #: tenancy/tables/contacts.py:90 vpn/tables/l2vpn.py:59
 msgid "Object Type"
-msgstr ""
+msgstr "对象类型"
 
 #: core/forms/filtersets.py:80
 msgid "Created after"
@@ -1866,7 +1866,7 @@ msgstr ""
 #: dcim/forms/model_forms.py:1197 netbox/navigation/menu.py:128
 #: netbox/navigation/menu.py:132 templates/dcim/interface.html:217
 msgid "Wireless"
-msgstr ""
+msgstr "无线"
 
 #: dcim/choices.py:950
 msgid "Virtual interfaces"
@@ -2534,30 +2534,30 @@ msgstr ""
 #: vpn/forms/model_forms.py:77 vpn/forms/model_forms.py:112
 #: vpn/tables/tunnels.py:82
 msgid "Role"
-msgstr ""
+msgstr "角色"
 
 #: dcim/forms/bulk_edit.py:273 dcim/forms/bulk_edit.py:605
 #: dcim/forms/bulk_edit.py:654 templates/dcim/device.html:106
 #: templates/dcim/module.html:75 templates/dcim/modulebay.html:69
 #: templates/dcim/rack.html:58
 msgid "Serial Number"
-msgstr ""
+msgstr "序列号"
 
 #: dcim/forms/bulk_edit.py:276 dcim/forms/filtersets.py:306
 #: dcim/forms/filtersets.py:740 dcim/forms/filtersets.py:880
 #: dcim/forms/filtersets.py:1430
 msgid "Asset tag"
-msgstr ""
+msgstr "资料标签"
 
 #: dcim/forms/bulk_edit.py:286 dcim/forms/bulk_import.py:220
 #: dcim/forms/filtersets.py:291 templates/dcim/rack.html:91
 #: templates/dcim/rack_edit.html:48
 msgid "Width"
-msgstr ""
+msgstr "宽度"
 
 #: dcim/forms/bulk_edit.py:292
 msgid "Height (U)"
-msgstr ""
+msgstr "高度（U）"
 
 #: dcim/forms/bulk_edit.py:297
 msgid "Descending units"
@@ -2933,7 +2933,7 @@ msgstr ""
 #: dcim/forms/bulk_edit.py:1041 dcim/forms/filtersets.py:1304
 #: dcim/forms/object_import.py:105
 msgid "Wireless role"
-msgstr ""
+msgstr "无线角色"
 
 #: dcim/forms/bulk_edit.py:1178 dcim/forms/model_forms.py:595
 #: dcim/forms/model_forms.py:1026 dcim/tables/devices.py:341
@@ -5309,17 +5309,17 @@ msgstr ""
 #: templates/ipam/ipaddress.html:12 templates/ipam/ipaddress_edit.html:14
 #: virtualization/tables/virtualmachines.py:94
 msgid "IP Address"
-msgstr ""
+msgstr "IP地址"
 
 #: dcim/tables/devices.py:224 dcim/tables/devices.py:1082
 #: virtualization/tables/virtualmachines.py:85
 msgid "IPv4 Address"
-msgstr ""
+msgstr "IPv4地址"
 
 #: dcim/tables/devices.py:228 dcim/tables/devices.py:1086
 #: virtualization/tables/virtualmachines.py:89
 msgid "IPv6 Address"
-msgstr ""
+msgstr "IPv6地址"
 
 #: dcim/tables/devices.py:243
 msgid "VC Position"
@@ -5417,7 +5417,7 @@ msgstr ""
 #: templates/ipam/service.html:43 templates/virtualization/vminterface.html:88
 #: vpn/tables/tunnels.py:98
 msgid "IP Addresses"
-msgstr ""
+msgstr "IP地址"
 
 #: dcim/tables/devices.py:588 netbox/navigation/menu.py:190
 #: templates/ipam/inc/panels/fhrp_groups.html:5
@@ -5483,7 +5483,7 @@ msgstr ""
 #: dcim/tables/devices.py:955 dcim/tables/devicetypes.py:308
 #: templates/dcim/inventoryitem.html:41
 msgid "Component"
-msgstr ""
+msgstr "部件"
 
 #: dcim/tables/devices.py:1010
 msgid "Items"
@@ -5501,11 +5501,11 @@ msgstr "模块类型"
 #: dcim/tables/devicetypes.py:53 extras/forms/filtersets.py:379
 #: extras/forms/model_forms.py:423 netbox/navigation/menu.py:66
 msgid "Platforms"
-msgstr ""
+msgstr "平台"
 
 #: dcim/tables/devicetypes.py:85 templates/dcim/devicetype.html:32
 msgid "Default Platform"
-msgstr ""
+msgstr "默认平台"
 
 #: dcim/tables/devicetypes.py:89 templates/dcim/devicetype.html:48
 msgid "Full Depth"
@@ -5599,7 +5599,7 @@ msgstr "机柜"
 #: dcim/tables/racks.py:73 templates/dcim/device.html:323
 #: templates/dcim/rack.html:95
 msgid "Height"
-msgstr ""
+msgstr "高度"
 
 #: dcim/tables/racks.py:85
 msgid "Space"
@@ -5607,11 +5607,11 @@ msgstr ""
 
 #: dcim/tables/racks.py:96 templates/dcim/rack.html:105
 msgid "Outer Width"
-msgstr ""
+msgstr "外部宽度"
 
 #: dcim/tables/racks.py:100 templates/dcim/rack.html:115
 msgid "Outer Depth"
-msgstr ""
+msgstr "外部深度"
 
 #: dcim/tables/racks.py:108
 msgid "Max Weight"
@@ -5646,7 +5646,7 @@ msgstr ""
 #: templates/extras/configcontext.html:10
 #: virtualization/forms/model_forms.py:228 virtualization/views.py:425
 msgid "Config Context"
-msgstr ""
+msgstr "配置上下文"
 
 #: dcim/views.py:2046 virtualization/views.py:435
 msgid "Render Config"
@@ -5732,7 +5732,7 @@ msgstr ""
 
 #: extras/choices.py:63
 msgid "Always"
-msgstr ""
+msgstr "总是"
 
 #: extras/choices.py:64
 msgid "If set"
@@ -5744,11 +5744,11 @@ msgstr ""
 
 #: extras/choices.py:76
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: extras/choices.py:77
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: extras/choices.py:105 templates/tenancy/contact.html:58
 #: tenancy/forms/bulk_edit.py:117 wireless/forms/model_forms.py:159
@@ -6013,11 +6013,11 @@ msgstr ""
 #: extras/dashboard/widgets.py:346 templates/account/base.html:10
 #: templates/account/bookmarks.html:7 templates/inc/profile_button.html:29
 msgid "Bookmarks"
-msgstr ""
+msgstr "书签"
 
 #: extras/dashboard/widgets.py:350
 msgid "Show your personal bookmarks"
-msgstr ""
+msgstr "显示个人书签"
 
 #: extras/events.py:133
 #, python-brace-format
@@ -6064,8 +6064,10 @@ msgid "Tag"
 msgstr "标签"
 
 #: extras/filtersets.py:534
-msgid "标签 (slug)"
-msgstr ""
+#, fuzzy
+#| msgid "Site (slug)"
+msgid "Tag (slug)"
+msgstr "站点"
 
 #: extras/filtersets.py:594 extras/forms/filtersets.py:438
 msgid "Has local config context data"
@@ -6442,7 +6444,7 @@ msgstr ""
 
 #: extras/forms/model_forms.py:166 templates/extras/exporttemplate.html:17
 msgid "Export Template"
-msgstr ""
+msgstr "导出模板"
 
 #: extras/forms/model_forms.py:168
 msgid "Rendering"
@@ -9157,19 +9159,19 @@ msgstr "群集组"
 
 #: netbox/navigation/menu.py:261
 msgid "Circuit Types"
-msgstr ""
+msgstr "电路类型"
 
 #: netbox/navigation/menu.py:265 netbox/navigation/menu.py:267
 msgid "Providers"
-msgstr ""
+msgstr "供应商"
 
 #: netbox/navigation/menu.py:268 templates/circuits/provider.html:53
 msgid "Provider Accounts"
-msgstr ""
+msgstr "供应商账号"
 
 #: netbox/navigation/menu.py:269
 msgid "Provider Networks"
-msgstr ""
+msgstr "供应商网络"
 
 #: netbox/navigation/menu.py:283
 msgid "Power Panels"
@@ -9177,19 +9179,19 @@ msgstr ""
 
 #: netbox/navigation/menu.py:294
 msgid "Configurations"
-msgstr ""
+msgstr "配置"
 
 #: netbox/navigation/menu.py:296
 msgid "Config Contexts"
-msgstr ""
+msgstr "配置上下文"
 
 #: netbox/navigation/menu.py:297
 msgid "Config Templates"
-msgstr ""
+msgstr "配置模板"
 
 #: netbox/navigation/menu.py:304 netbox/navigation/menu.py:308
 msgid "Customization"
-msgstr ""
+msgstr "定制"
 
 #: netbox/navigation/menu.py:310
 #: templates/circuits/circuittermination_edit.html:53
@@ -9205,7 +9207,7 @@ msgstr ""
 #: templates/tenancy/contactassignment_edit.html:31
 #: templates/vpn/l2vpntermination_edit.html:51
 msgid "Custom Fields"
-msgstr ""
+msgstr "自定义字段"
 
 #: netbox/navigation/menu.py:311
 msgid "Custom Field Choices"
@@ -9233,19 +9235,19 @@ msgstr ""
 
 #: netbox/navigation/menu.py:340
 msgid "Operations"
-msgstr ""
+msgstr "操作"
 
 #: netbox/navigation/menu.py:344
 msgid "Integrations"
-msgstr ""
+msgstr "集成"
 
 #: netbox/navigation/menu.py:346
 msgid "Data Sources"
-msgstr ""
+msgstr "数据源"
 
 #: netbox/navigation/menu.py:347
 msgid "Event Rules"
-msgstr ""
+msgstr "事件规则"
 
 #: netbox/navigation/menu.py:348
 msgid "Webhooks"
@@ -9255,11 +9257,11 @@ msgstr ""
 #: netbox/views/generic/feature_views.py:151
 #: templates/extras/report/base.html:37 templates/extras/script/base.html:36
 msgid "Jobs"
-msgstr ""
+msgstr "任务"
 
 #: netbox/navigation/menu.py:362
 msgid "Logging"
-msgstr ""
+msgstr "日志"
 
 #: netbox/navigation/menu.py:364
 msgid "Journal Entries"
@@ -9272,19 +9274,19 @@ msgstr ""
 
 #: netbox/navigation/menu.py:372 templates/inc/profile_button.html:18
 msgid "Admin"
-msgstr ""
+msgstr "管理后台"
 
 #: netbox/navigation/menu.py:381 templates/users/group.html:27
 #: users/forms/model_forms.py:243 users/forms/model_forms.py:256
 #: users/forms/model_forms.py:310 users/tables.py:105
 msgid "Users"
-msgstr ""
+msgstr "用户"
 
 #: netbox/navigation/menu.py:404 users/forms/model_forms.py:183
 #: users/forms/model_forms.py:196 users/forms/model_forms.py:315
 #: users/tables.py:35 users/tables.py:109
 msgid "Groups"
-msgstr ""
+msgstr "组"
 
 #: netbox/navigation/menu.py:426 templates/account/base.html:21
 #: templates/inc/profile_button.html:39
@@ -9560,21 +9562,21 @@ msgstr ""
 
 #: templates/500.html:42 templates/base/40x.html:17
 msgid "Home Page"
-msgstr ""
+msgstr "主页"
 
 #: templates/account/base.html:7 templates/inc/profile_button.html:24
 #: vpn/forms/bulk_edit.py:256 vpn/forms/filtersets.py:186
 #: vpn/forms/model_forms.py:378
 msgid "Profile"
-msgstr ""
+msgstr "资料"
 
 #: templates/account/base.html:13 templates/inc/profile_button.html:34
 msgid "Preferences"
-msgstr ""
+msgstr "偏好设置"
 
 #: templates/account/password.html:5
 msgid "Change Password"
-msgstr ""
+msgstr "更改密码"
 
 #: templates/account/password.html:17 templates/account/preferences.html:82
 #: templates/core/configrevision_restore.html:80
@@ -9639,20 +9641,20 @@ msgstr ""
 
 #: templates/account/profile.html:6
 msgid "User Profile"
-msgstr ""
+msgstr "用户资料"
 
 #: templates/account/profile.html:12
 msgid "Account Details"
-msgstr ""
+msgstr "账号详情"
 
 #: templates/account/profile.html:30 templates/tenancy/contact.html:44
 #: templates/users/user.html:26 tenancy/forms/bulk_edit.py:108
 msgid "Email"
-msgstr ""
+msgstr "邮箱"
 
 #: templates/account/profile.html:34 templates/users/user.html:30
 msgid "Account Created"
-msgstr ""
+msgstr "账号已创建"
 
 #: templates/account/profile.html:38 templates/users/user.html:34
 msgid "Last Login"
@@ -10243,7 +10245,7 @@ msgstr ""
 #: templates/virtualization/virtualmachine/base.html:22
 #: templates/virtualization/virtualmachine_list.html:8
 msgid "Add Components"
-msgstr ""
+msgstr "添加组件"
 
 #: templates/dcim/device/consoleports.html:24
 msgid "Add Console Ports"
@@ -10517,7 +10519,7 @@ msgstr ""
 
 #: templates/dcim/interface.html:157
 msgid "Wireless Link"
-msgstr ""
+msgstr "无线连接"
 
 #: templates/dcim/interface.html:226 vpn/choices.py:55
 msgid "Peer"
@@ -11052,7 +11054,7 @@ msgstr ""
 
 #: templates/extras/dashboard/widgets/bookmarks.html:14
 msgid "No bookmarks have been added yet."
-msgstr ""
+msgstr "未增加书签"
 
 #: templates/extras/dashboard/widgets/objectcounts.html:15
 msgid "No permission"
@@ -11060,7 +11062,7 @@ msgstr ""
 
 #: templates/extras/dashboard/widgets/objectlist.html:6
 msgid "No permission to view this content"
-msgstr ""
+msgstr "没有权限查看此内容"
 
 #: templates/extras/dashboard/widgets/objectlist.html:10
 msgid "Unable to load content. Invalid view name"
@@ -11528,11 +11530,11 @@ msgstr ""
 
 #: templates/generic/object_list.html:48 templates/search.html:13
 msgid "Results"
-msgstr ""
+msgstr "结果"
 
 #: templates/generic/object_list.html:54
 msgid "Filters"
-msgstr ""
+msgstr "过滤"
 
 #: templates/generic/object_list.html:94
 #, python-format
@@ -11615,7 +11617,7 @@ msgstr ""
 
 #: templates/inc/panels/related_objects.html:5
 msgid "Related Objects"
-msgstr ""
+msgstr "相关对象"
 
 #: templates/inc/panels/tags.html:11
 msgid "No tags assigned"
@@ -11627,11 +11629,11 @@ msgstr ""
 
 #: templates/inc/profile_button.html:45
 msgid "Log Out"
-msgstr ""
+msgstr "退出登录"
 
 #: templates/inc/profile_button.html:53
 msgid "Log In"
-msgstr ""
+msgstr "登录"
 
 #: templates/inc/sync_warning.html:7
 msgid "Data is out of sync with upstream file"
@@ -11670,7 +11672,7 @@ msgstr ""
 
 #: templates/ipam/fhrpgroup.html:72
 msgid "Virtual IP Addresses"
-msgstr ""
+msgstr "虚拟IP地址"
 
 #: templates/ipam/fhrpgroupassignment_edit.html:8
 msgid "FHRP Group Assignment"
@@ -11678,7 +11680,7 @@ msgstr ""
 
 #: templates/ipam/inc/ipaddress_edit_header.html:19
 msgid "Assign IP"
-msgstr ""
+msgstr "分配IP"
 
 #: templates/ipam/inc/ipaddress_edit_header.html:28
 msgid "Bulk Create"
@@ -11686,15 +11688,15 @@ msgstr ""
 
 #: templates/ipam/inc/panels/fhrp_groups.html:12
 msgid "Virtual IPs"
-msgstr ""
+msgstr "虚拟IP地址"
 
 #: templates/ipam/inc/panels/fhrp_groups.html:52
 msgid "Create Group"
-msgstr ""
+msgstr "创建组"
 
 #: templates/ipam/inc/panels/fhrp_groups.html:57
 msgid "Assign Group"
-msgstr ""
+msgstr "分配组"
 
 #: templates/ipam/inc/toggle_available.html:7
 msgid "Show Assigned"
@@ -11706,7 +11708,7 @@ msgstr ""
 
 #: templates/ipam/inc/toggle_available.html:13
 msgid "Show All"
-msgstr ""
+msgstr "显示所有"
 
 #: templates/ipam/ipaddress.html:26 templates/ipam/iprange.html:48
 #: templates/ipam/prefix.html:25
@@ -12061,16 +12063,16 @@ msgstr ""
 
 #: templates/virtualization/cluster_add_devices.html:31
 msgid "Add Devices"
-msgstr ""
+msgstr "添加设备"
 
 #: templates/virtualization/cluster_sync_vm.html:18
 #: templates/virtualization/cluster_sync_vm.html:45
 msgid "Synchronize"
-msgstr ""
+msgstr "同步"
 
 #: templates/virtualization/cluster_sync_vm.html:24
 msgid "Confirm Bulk VM Synchronization"
-msgstr ""
+msgstr "确认批量同步虚拟机"
 
 #: templates/virtualization/cluster_sync_vm.html:27
 #, python-format
@@ -12083,22 +12085,22 @@ msgstr ""
 #: templates/virtualization/clustergroup.html:10
 #: templates/virtualization/clustertype.html:10
 msgid "Add Cluster"
-msgstr ""
+msgstr "添加群集"
 
 #: templates/virtualization/clustergroup.html:20
 #: virtualization/forms/model_forms.py:51
 msgid "Cluster Group"
-msgstr ""
+msgstr "群集组"
 
 #: templates/virtualization/clustertype.html:20
 #: templates/virtualization/virtualmachine.html:111
 #: virtualization/forms/model_forms.py:35
 msgid "Cluster Type"
-msgstr ""
+msgstr "群集类型"
 
 #: templates/virtualization/virtualdisk.html:18
 msgid "Virtual Disk"
-msgstr ""
+msgstr "虚拟硬盘"
 
 #: templates/virtualization/virtualmachine.html:124
 #: virtualization/forms/bulk_edit.py:189
@@ -12108,7 +12110,7 @@ msgstr ""
 
 #: templates/virtualization/virtualmachine.html:185
 msgid "Add Virtual Disk"
-msgstr ""
+msgstr "添加虚拟硬盘"
 
 #: templates/vpn/ikepolicy.html:10 templates/vpn/ipsecprofile.html:35
 #: vpn/tables/crypto.py:166
@@ -12265,7 +12267,7 @@ msgstr ""
 
 #: templates/wireless/wirelesslan.html:11 wireless/forms/model_forms.py:54
 msgid "Wireless LAN"
-msgstr ""
+msgstr "无线局域网"
 
 #: templates/wireless/wirelesslan.html:59
 msgid "Attached Interfaces"
@@ -12273,7 +12275,7 @@ msgstr ""
 
 #: templates/wireless/wirelesslangroup.html:17
 msgid "Add Wireless LAN"
-msgstr ""
+msgstr "添加无线局域网"
 
 #: templates/wireless/wirelesslangroup.html:26 wireless/forms/model_forms.py:27
 msgid "Wireless LAN Group"
@@ -12508,7 +12510,7 @@ msgstr ""
 
 #: users/forms/model_forms.py:177
 msgid "Confirm password"
-msgstr ""
+msgstr "确认密码"
 
 #: users/forms/model_forms.py:180
 msgid "Enter the same password as before, for verification."
@@ -12516,7 +12518,8 @@ msgstr ""
 
 #: users/forms/model_forms.py:238
 msgid "Passwords do not match! Please check your input and try again."
-msgstr ""
+ 
+msgstr "密码不匹配，请重试"
 
 #: users/forms/model_forms.py:304
 msgid "Additional actions"
@@ -12528,7 +12531,7 @@ msgstr ""
 
 #: users/forms/model_forms.py:323
 msgid "Objects"
-msgstr ""
+msgstr "对象"
 
 #: users/forms/model_forms.py:335
 msgid ""
@@ -12552,11 +12555,11 @@ msgstr ""
 
 #: users/models.py:54
 msgid "user"
-msgstr ""
+msgstr "用户"
 
 #: users/models.py:55
 msgid "users"
-msgstr ""
+msgstr "用户"
 
 #: users/models.py:66
 msgid "A user with this username already exists."
@@ -12564,15 +12567,15 @@ msgstr ""
 
 #: users/models.py:78 vpn/models/crypto.py:42
 msgid "group"
-msgstr ""
+msgstr "组"
 
 #: users/models.py:79
 msgid "groups"
-msgstr ""
+msgstr "组"
 
 #: users/models.py:106 users/models.py:107
 msgid "user preferences"
-msgstr ""
+msgstr "用户偏好设置"
 
 #: users/models.py:174
 #, python-brace-format
@@ -12624,7 +12627,7 @@ msgstr ""
 
 #: users/models.py:373
 msgid "The list of actions granted by this permission"
-msgstr ""
+msgstr "该权限授予的操作列表"
 
 #: users/models.py:378
 msgid "constraints"
@@ -12636,11 +12639,11 @@ msgstr ""
 
 #: users/models.py:386
 msgid "permission"
-msgstr ""
+msgstr "权限"
 
 #: users/models.py:387
 msgid "permissions"
-msgstr ""
+msgstr "权限"
 
 #: users/tables.py:101
 msgid "Custom Actions"
@@ -12653,63 +12656,63 @@ msgstr ""
 
 #: utilities/choices.py:135
 msgid "Dark Red"
-msgstr ""
+msgstr "深红"
 
 #: utilities/choices.py:138
 msgid "Rose"
-msgstr ""
+msgstr "玫瑰色"
 
 #: utilities/choices.py:139
 msgid "Fuchsia"
-msgstr ""
+msgstr "紫红色"
 
 #: utilities/choices.py:141
 msgid "Dark Purple"
-msgstr ""
+msgstr "深紫色"
 
 #: utilities/choices.py:144
 msgid "Light Blue"
-msgstr ""
+msgstr "淡蓝色"
 
 #: utilities/choices.py:147
 msgid "Aqua"
-msgstr ""
+msgstr "浅绿色"
 
 #: utilities/choices.py:148
 msgid "Dark Green"
-msgstr ""
+msgstr "深绿色"
 
 #: utilities/choices.py:150
 msgid "Light Green"
-msgstr ""
+msgstr "淡绿色"
 
 #: utilities/choices.py:151
 msgid "Lime"
-msgstr ""
+msgstr "淡黄绿色"
 
 #: utilities/choices.py:153
 msgid "Amber"
-msgstr ""
+msgstr "黄褐色"
 
 #: utilities/choices.py:155
 msgid "Dark Orange"
-msgstr ""
+msgstr "深橙色"
 
 #: utilities/choices.py:156
 msgid "Brown"
-msgstr ""
+msgstr "棕色"
 
 #: utilities/choices.py:157
 msgid "Light Grey"
-msgstr ""
+msgstr "淡灰色"
 
 #: utilities/choices.py:158
 msgid "Grey"
-msgstr ""
+msgstr "灰色"
 
 #: utilities/choices.py:159
 msgid "Dark Grey"
-msgstr ""
+msgstr "深灰色"
 
 #: utilities/choices.py:217
 msgid "Direct"
@@ -12770,7 +12773,7 @@ msgstr ""
 
 #: utilities/forms/bulk_import.py:37
 msgid "CSV delimiter"
-msgstr ""
+msgstr "CSV分隔符"
 
 #: utilities/forms/bulk_import.py:38
 msgid "The character which delimits CSV fields. Applies only to CSV format."
@@ -12971,39 +12974,39 @@ msgstr ""
 
 #: utilities/templates/buttons/bookmark.html:9
 msgid "Unbookmark"
-msgstr ""
+msgstr "取消书签"
 
 #: utilities/templates/buttons/bookmark.html:13
 msgid "Bookmark"
-msgstr ""
+msgstr "添加书签"
 
 #: utilities/templates/buttons/bulk_sync_vm.html:4
 msgid "Sync VMs of Selected"
-msgstr ""
+msgstr "同步所选群集虚拟机"
 
 #: utilities/templates/buttons/clone.html:4
 msgid "Clone"
-msgstr ""
+msgstr "克隆"
 
 #: utilities/templates/buttons/export.html:4
 msgid "Export"
-msgstr ""
+msgstr "导出"
 
 #: utilities/templates/buttons/export.html:7
 msgid "Current View"
-msgstr ""
+msgstr "当前视图"
 
 #: utilities/templates/buttons/export.html:8
 msgid "All Data"
-msgstr ""
+msgstr "所有数据"
 
 #: utilities/templates/buttons/export.html:28
 msgid "Add export template"
-msgstr ""
+msgstr "添加导出模板"
 
 #: utilities/templates/buttons/import.html:4
 msgid "Import"
-msgstr ""
+msgstr "导入"
 
 #: utilities/templates/form_helpers/render_field.html:36
 msgid "Copy to clipboard"
