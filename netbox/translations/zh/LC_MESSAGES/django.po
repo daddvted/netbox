@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-18 10:15+0000\n"
+"POT-Creation-Date: 2024-03-21 08:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,7 +66,7 @@ msgstr "你的编好设置已更新。"
 msgid "Planned"
 msgstr ""
 
-#: circuits/choices.py:22 netbox/navigation/menu.py:290
+#: circuits/choices.py:22 netbox/navigation/menu.py:304
 msgid "Provisioning"
 msgstr "配备"
 
@@ -210,11 +210,11 @@ msgstr ""
 
 #: circuits/filtersets.py:168
 msgid "Circuit type (ID)"
-msgstr ""
+msgstr "电路类型 （ID）"
 
 #: circuits/filtersets.py:174
 msgid "Circuit type (slug)"
-msgstr ""
+msgstr "电路类型（slug）"
 
 #: circuits/filtersets.py:209 circuits/filtersets.py:246 dcim/filtersets.py:209
 #: dcim/filtersets.py:284 dcim/filtersets.py:357 dcim/filtersets.py:927
@@ -223,7 +223,7 @@ msgstr ""
 #: ipam/filtersets.py:920 virtualization/filtersets.py:69
 #: virtualization/filtersets.py:197 vpn/filtersets.py:340
 msgid "Site (ID)"
-msgstr ""
+msgstr "站点"
 
 #: circuits/filtersets.py:238 core/filtersets.py:73 core/filtersets.py:132
 #: dcim/filtersets.py:640 dcim/filtersets.py:1201 dcim/filtersets.py:2076
@@ -239,7 +239,7 @@ msgstr ""
 #: users/filtersets.py:21 users/filtersets.py:37 users/filtersets.py:69
 #: users/filtersets.py:117 utilities/forms/forms.py:99
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: circuits/filtersets.py:242 circuits/forms/bulk_edit.py:167
 #: circuits/forms/model_forms.py:110 circuits/forms/model_forms.py:132
@@ -258,7 +258,7 @@ msgstr ""
 #: dcim/forms/bulk_edit.py:126 dcim/forms/filtersets.py:187
 #: dcim/forms/model_forms.py:126 dcim/tables/sites.py:94
 #: ipam/models/asns.py:126 ipam/tables/asn.py:27 ipam/views.py:219
-#: netbox/navigation/menu.py:160 netbox/navigation/menu.py:163
+#: netbox/navigation/menu.py:174 netbox/navigation/menu.py:177
 #: templates/circuits/provider.html:24
 msgid "ASNs"
 msgstr ""
@@ -371,12 +371,12 @@ msgstr "描述"
 #: templates/circuits/providernetwork.html:23
 #: templates/dcim/inc/cable_termination.html:51
 msgid "Provider"
-msgstr ""
+msgstr "供应商"
 
 #: circuits/forms/bulk_edit.py:75 circuits/forms/filtersets.py:91
 #: templates/circuits/providernetwork.html:31
 msgid "Service ID"
-msgstr ""
+msgstr "服务ID"
 
 #: circuits/forms/bulk_edit.py:95 circuits/forms/filtersets.py:107
 #: dcim/forms/bulk_edit.py:204 dcim/forms/bulk_edit.py:500
@@ -393,7 +393,7 @@ msgstr ""
 #: templates/dcim/rackrole.html:33 templates/dcim/rearport.html:43
 #: templates/extras/tag.html:29
 msgid "Color"
-msgstr ""
+msgstr "颜色"
 
 #: circuits/forms/bulk_edit.py:113 circuits/forms/bulk_import.py:89
 #: circuits/forms/filtersets.py:126 core/forms/bulk_edit.py:17
@@ -568,7 +568,7 @@ msgstr ""
 
 #: circuits/forms/bulk_edit.py:168 circuits/forms/model_forms.py:111
 msgid "Service Parameters"
-msgstr ""
+msgstr "服务参数"
 
 #: circuits/forms/bulk_edit.py:169 circuits/forms/model_forms.py:112
 #: dcim/forms/model_forms.py:141 dcim/forms/model_forms.py:183
@@ -1061,8 +1061,8 @@ msgid "Name"
 msgstr "名称"
 
 #: circuits/tables/circuits.py:38 circuits/tables/providers.py:45
-#: circuits/tables/providers.py:79 netbox/navigation/menu.py:254
-#: netbox/navigation/menu.py:258 netbox/navigation/menu.py:260
+#: circuits/tables/providers.py:79 netbox/navigation/menu.py:268
+#: netbox/navigation/menu.py:272 netbox/navigation/menu.py:274
 #: templates/circuits/provider.html:61
 #: templates/circuits/provideraccount.html:46
 #: templates/circuits/providernetwork.html:54
@@ -1141,13 +1141,13 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-#: core/choices.py:35 netbox/navigation/menu.py:330
+#: core/choices.py:35 netbox/navigation/menu.py:344
 #: templates/extras/script/base.html:14 templates/extras/script_list.html:6
 #: templates/extras/script_list.html:20 templates/extras/script_result.html:18
 msgid "Scripts"
 msgstr ""
 
-#: core/choices.py:36 netbox/navigation/menu.py:324
+#: core/choices.py:36 netbox/navigation/menu.py:338
 #: templates/extras/report/base.html:13 templates/extras/report_list.html:7
 #: templates/extras/report_list.html:12
 msgid "Reports"
@@ -1355,16 +1355,16 @@ msgstr "机柜立面图"
 #: core/forms/model_forms.py:148 dcim/choices.py:1413
 #: dcim/forms/bulk_edit.py:859 dcim/forms/bulk_edit.py:1242
 #: dcim/forms/bulk_edit.py:1260 dcim/tables/racks.py:89
-#: netbox/navigation/menu.py:276 netbox/navigation/menu.py:280
+#: netbox/navigation/menu.py:290 netbox/navigation/menu.py:294
 msgid "Power"
 msgstr "电源"
 
-#: core/forms/model_forms.py:149 netbox/navigation/menu.py:142
+#: core/forms/model_forms.py:149 netbox/navigation/menu.py:156
 #: templates/core/configrevision.html:79
 msgid "IPAM"
 msgstr "IP地址管理"
 
-#: core/forms/model_forms.py:150 netbox/navigation/menu.py:218
+#: core/forms/model_forms.py:150 netbox/navigation/menu.py:232
 #: templates/core/configrevision.html:95 vpn/forms/bulk_edit.py:76
 #: vpn/forms/filtersets.py:42 vpn/forms/model_forms.py:60
 #: vpn/forms/model_forms.py:145
@@ -1656,7 +1656,7 @@ msgstr ""
 #: templates/extras/journalentry.html:21 templates/extras/objectchange.html:62
 #: tenancy/tables/contacts.py:93 vpn/tables/l2vpn.py:64
 msgid "Object"
-msgstr ""
+msgstr "对象"
 
 #: core/tables/jobs.py:35
 msgid "Interval"
@@ -1797,19 +1797,19 @@ msgstr ""
 
 #: dcim/choices.py:193
 msgid "Front to rear"
-msgstr ""
+msgstr "从前到后"
 
 #: dcim/choices.py:194
 msgid "Rear to front"
-msgstr ""
+msgstr "从后到前"
 
 #: dcim/choices.py:195
 msgid "Left to right"
-msgstr ""
+msgstr "从左到右"
 
 #: dcim/choices.py:196
 msgid "Right to left"
-msgstr ""
+msgstr "从右到左"
 
 #: dcim/choices.py:197
 msgid "Side to rear"
@@ -1845,9 +1845,9 @@ msgstr ""
 
 #: dcim/choices.py:534 dcim/choices.py:764 dcim/choices.py:1137
 #: dcim/choices.py:1139 dcim/choices.py:1344 dcim/choices.py:1346
-#: netbox/navigation/menu.py:188
+#: netbox/navigation/menu.py:202
 msgid "Other"
-msgstr ""
+msgstr "其它"
 
 #: dcim/choices.py:733
 msgid "ITA/International"
@@ -2254,7 +2254,7 @@ msgstr ""
 
 #: dcim/filtersets.py:985
 msgid "Virtual chassis (ID)"
-msgstr ""
+msgstr "虚拟机架"
 
 #: dcim/filtersets.py:989
 msgid "Is a virtual chassis member"
@@ -2266,21 +2266,21 @@ msgstr ""
 
 #: dcim/filtersets.py:1162
 msgid "Module type (model)"
-msgstr ""
+msgstr "模块类型"
 
 #: dcim/filtersets.py:1168
 msgid "Module Bay (ID)"
-msgstr ""
+msgstr "模块托架"
 
 #: dcim/filtersets.py:1172 dcim/filtersets.py:1264 ipam/filtersets.py:577
 #: ipam/filtersets.py:807 ipam/filtersets.py:1026
 #: virtualization/filtersets.py:161 vpn/filtersets.py:351
 msgid "Device (ID)"
-msgstr ""
+msgstr "设备"
 
 #: dcim/filtersets.py:1260
 msgid "Rack (name)"
-msgstr ""
+msgstr "机柜"
 
 #: dcim/filtersets.py:1270 ipam/filtersets.py:572 ipam/filtersets.py:802
 #: ipam/filtersets.py:1032 vpn/filtersets.py:346
@@ -2310,7 +2310,7 @@ msgstr ""
 #: templates/dcim/virtualchassis_add.html:8
 #: templates/dcim/virtualchassis_edit.html:25
 msgid "Virtual Chassis"
-msgstr ""
+msgstr "虚拟机箱"
 
 #: dcim/filtersets.py:1335
 msgid "Module (ID)"
@@ -2430,7 +2430,7 @@ msgstr ""
 #: templates/generic/bulk_edit.html:81 templates/inc/panels/tags.html:5
 #: utilities/forms/fields/fields.py:81
 msgid "Tags"
-msgstr ""
+msgstr "标签"
 
 #: dcim/forms/bulk_create.py:112 dcim/forms/filtersets.py:1390
 #: dcim/forms/model_forms.py:426 dcim/forms/model_forms.py:475
@@ -2806,7 +2806,7 @@ msgstr ""
 msgid "Device"
 msgstr ""
 
-#: dcim/forms/bulk_edit.py:624 netbox/navigation/menu.py:441
+#: dcim/forms/bulk_edit.py:624 netbox/navigation/menu.py:455
 #: templates/extras/dashboard/widget_config.html:7
 msgid "Configuration"
 msgstr ""
@@ -2831,17 +2831,17 @@ msgstr ""
 #: templates/dcim/powerport.html:35 templates/dcim/rearport.html:35
 #: templates/extras/customfield.html:27 templates/generic/bulk_import.html:155
 msgid "Label"
-msgstr ""
+msgstr "标签"
 
 #: dcim/forms/bulk_edit.py:698 dcim/forms/filtersets.py:981
 #: templates/dcim/cable.html:51
 msgid "Length"
-msgstr ""
+msgstr "长度"
 
 #: dcim/forms/bulk_edit.py:703 dcim/forms/bulk_import.py:1174
 #: dcim/forms/bulk_import.py:1177 dcim/forms/filtersets.py:985
 msgid "Length unit"
-msgstr ""
+msgstr "长度单位"
 
 #: dcim/forms/bulk_edit.py:727 templates/dcim/virtualchassis.html:24
 msgid "Domain"
@@ -2905,7 +2905,7 @@ msgstr ""
 #: dcim/forms/model_forms.py:855 dcim/forms/model_forms.py:1083
 #: dcim/forms/model_forms.py:1368 dcim/forms/object_import.py:60
 msgid "Power port"
-msgstr ""
+msgstr "电源端口"
 
 #: dcim/forms/bulk_edit.py:973 dcim/forms/bulk_import.py:738
 msgid "Feed leg"
@@ -2920,7 +2920,7 @@ msgstr ""
 #: dcim/forms/object_import.py:95 dcim/models/device_component_templates.py:411
 #: dcim/models/device_components.py:671
 msgid "PoE mode"
-msgstr ""
+msgstr "PoE模式"
 
 #: dcim/forms/bulk_edit.py:1035 dcim/forms/bulk_edit.py:1337
 #: dcim/forms/bulk_import.py:827 dcim/forms/filtersets.py:1299
@@ -2928,7 +2928,7 @@ msgstr ""
 #: dcim/models/device_component_templates.py:417
 #: dcim/models/device_components.py:677
 msgid "PoE type"
-msgstr ""
+msgstr "PoE类型"
 
 #: dcim/forms/bulk_edit.py:1041 dcim/forms/filtersets.py:1304
 #: dcim/forms/object_import.py:105
@@ -2943,7 +2943,7 @@ msgstr "无线角色"
 #: templates/dcim/poweroutlet.html:27 templates/dcim/powerport.html:27
 #: templates/dcim/rearport.html:27
 msgid "Module"
-msgstr ""
+msgstr "模块"
 
 #: dcim/forms/bulk_edit.py:1305 dcim/tables/devices.py:689
 #: templates/dcim/interface.html:113
@@ -2972,14 +2972,14 @@ msgstr ""
 #: vpn/forms/filtersets.py:175 vpn/forms/filtersets.py:189
 #: vpn/tables/crypto.py:64 vpn/tables/crypto.py:162
 msgid "Mode"
-msgstr ""
+msgstr "模式"
 
 #: dcim/forms/bulk_edit.py:1353 dcim/forms/model_forms.py:1159
 #: ipam/forms/bulk_import.py:177 ipam/forms/filtersets.py:479
 #: ipam/models/vlans.py:84 virtualization/forms/bulk_edit.py:239
 #: virtualization/forms/model_forms.py:324
 msgid "VLAN group"
-msgstr ""
+msgstr "VLAN组"
 
 #: dcim/forms/bulk_edit.py:1361 dcim/forms/model_forms.py:1164
 #: dcim/tables/devices.py:603 virtualization/forms/bulk_edit.py:247
@@ -3579,7 +3579,7 @@ msgstr ""
 #: dcim/forms/filtersets.py:1245 dcim/forms/model_forms.py:1484
 #: templates/dcim/virtualdevicecontext.html:16
 msgid "Virtual Device Context"
-msgstr ""
+msgstr "虚拟设备上下文"
 
 #: dcim/forms/filtersets.py:1248 extras/forms/bulk_edit.py:315
 #: extras/forms/bulk_import.py:239 extras/forms/filtersets.py:479
@@ -3723,11 +3723,11 @@ msgstr ""
 #: vpn/forms/model_forms.py:445 vpn/tables/tunnels.py:91
 #: wireless/forms/model_forms.py:112 wireless/forms/model_forms.py:152
 msgid "Interface"
-msgstr ""
+msgstr "接口"
 
 #: dcim/forms/model_forms.py:1285
 msgid "Child Device"
-msgstr ""
+msgstr "子设备"
 
 #: dcim/forms/model_forms.py:1286
 msgid ""
@@ -3737,19 +3737,19 @@ msgstr ""
 
 #: dcim/forms/model_forms.py:1328
 msgid "Console port"
-msgstr ""
+msgstr "控制台端口"
 
 #: dcim/forms/model_forms.py:1336
 msgid "Console server port"
-msgstr ""
+msgstr "控制台服务器端口"
 
 #: dcim/forms/model_forms.py:1344
 msgid "Front port"
-msgstr ""
+msgstr "前端口"
 
 #: dcim/forms/model_forms.py:1360
 msgid "Power outlet"
-msgstr ""
+msgstr "电源插座"
 
 #: dcim/forms/model_forms.py:1380 templates/dcim/inventoryitem.html:17
 #: templates/dcim/inventoryitem_edit.html:10
@@ -3768,13 +3768,13 @@ msgstr ""
 #: templates/dcim/virtualdevicecontext.html:33
 #: templates/virtualization/virtualmachine.html:51
 msgid "Primary IPv4"
-msgstr ""
+msgstr "私有IPv4"
 
 #: dcim/forms/model_forms.py:1475 templates/dcim/device.html:211
 #: templates/dcim/virtualdevicecontext.html:44
 #: templates/virtualization/virtualmachine.html:67
 msgid "Primary IPv6"
-msgstr ""
+msgstr "私有IPv6"
 
 #: dcim/forms/object_create.py:47 dcim/forms/object_create.py:198
 #: dcim/forms/object_create.py:354
@@ -3793,7 +3793,7 @@ msgstr ""
 #: dcim/forms/object_create.py:109 dcim/forms/object_create.py:270
 #: dcim/tables/devices.py:285
 msgid "Rear ports"
-msgstr ""
+msgstr "后端口"
 
 #: dcim/forms/object_create.py:110 dcim/forms/object_create.py:271
 msgid "Select one rear port assignment for each front port being created."
@@ -5263,7 +5263,7 @@ msgstr ""
 #: templates/dcim/consoleserverport.html:75 templates/dcim/frontport.html:119
 #: templates/dcim/inventoryitem_edit.html:39
 msgid "Console Port"
-msgstr ""
+msgstr "控制端口"
 
 #: dcim/tables/connections.py:31 dcim/tables/connections.py:50
 #: dcim/tables/connections.py:71
@@ -5357,7 +5357,7 @@ msgstr ""
 #: dcim/tables/devices.py:279 dcim/tables/devices.py:1091
 #: dcim/tables/devicetypes.py:125 dcim/views.py:1005 dcim/views.py:1244
 #: dcim/views.py:1930 netbox/navigation/menu.py:82
-#: netbox/navigation/menu.py:238 templates/dcim/device/base.html:37
+#: netbox/navigation/menu.py:252 templates/dcim/device/base.html:37
 #: templates/dcim/device_list.html:43 templates/dcim/devicetype/base.html:34
 #: templates/dcim/module.html:34 templates/dcim/moduletype/base.html:34
 #: templates/dcim/virtualdevicecontext.html:64
@@ -5412,14 +5412,14 @@ msgstr ""
 
 #: dcim/tables/devices.py:582 ipam/forms/model_forms.py:693
 #: ipam/tables/fhrp.py:28 ipam/views.py:597 ipam/views.py:691
-#: netbox/navigation/menu.py:146 netbox/navigation/menu.py:148
+#: netbox/navigation/menu.py:160 netbox/navigation/menu.py:162
 #: templates/dcim/interface.html:351 templates/ipam/ipaddress_bulk_add.html:15
 #: templates/ipam/service.html:43 templates/virtualization/vminterface.html:88
 #: vpn/tables/tunnels.py:98
 msgid "IP Addresses"
 msgstr "IP地址"
 
-#: dcim/tables/devices.py:588 netbox/navigation/menu.py:190
+#: dcim/tables/devices.py:588 netbox/navigation/menu.py:204
 #: templates/ipam/inc/panels/fhrp_groups.html:5
 msgid "FHRP Groups"
 msgstr ""
@@ -5525,7 +5525,7 @@ msgstr ""
 #: templates/dcim/devicetype/base.html:22 templates/dcim/module.html:22
 #: templates/dcim/moduletype/base.html:22
 msgid "Console Ports"
-msgstr ""
+msgstr "控制台端口"
 
 #: dcim/tables/devicetypes.py:116 dcim/views.py:960 dcim/views.py:1199
 #: dcim/views.py:1885 netbox/navigation/menu.py:86
@@ -5533,7 +5533,7 @@ msgstr ""
 #: templates/dcim/devicetype/base.html:25 templates/dcim/module.html:25
 #: templates/dcim/moduletype/base.html:25
 msgid "Console Server Ports"
-msgstr ""
+msgstr "控制台服务器端口"
 
 #: dcim/tables/devicetypes.py:119 dcim/views.py:975 dcim/views.py:1214
 #: dcim/views.py:1900 netbox/navigation/menu.py:87
@@ -5541,7 +5541,7 @@ msgstr ""
 #: templates/dcim/devicetype/base.html:28 templates/dcim/module.html:28
 #: templates/dcim/moduletype/base.html:28
 msgid "Power Ports"
-msgstr ""
+msgstr "电源端口"
 
 #: dcim/tables/devicetypes.py:122 dcim/views.py:990 dcim/views.py:1229
 #: dcim/views.py:1915 netbox/navigation/menu.py:88
@@ -5549,14 +5549,14 @@ msgstr ""
 #: templates/dcim/devicetype/base.html:31 templates/dcim/module.html:31
 #: templates/dcim/moduletype/base.html:31
 msgid "Power Outlets"
-msgstr ""
+msgstr "电源插座"
 
 #: dcim/tables/devicetypes.py:128 dcim/views.py:1020 dcim/views.py:1259
 #: dcim/views.py:1951 netbox/navigation/menu.py:83
 #: templates/dcim/device/base.html:40 templates/dcim/devicetype/base.html:37
 #: templates/dcim/module.html:37 templates/dcim/moduletype/base.html:37
 msgid "Front Ports"
-msgstr ""
+msgstr "前端口"
 
 #: dcim/tables/devicetypes.py:131 dcim/views.py:1035 dcim/views.py:1274
 #: dcim/views.py:1966 netbox/navigation/menu.py:84
@@ -5564,24 +5564,24 @@ msgstr ""
 #: templates/dcim/devicetype/base.html:40 templates/dcim/module.html:40
 #: templates/dcim/moduletype/base.html:40
 msgid "Rear Ports"
-msgstr ""
+msgstr "后端口"
 
 #: dcim/tables/devicetypes.py:134 dcim/views.py:1065 dcim/views.py:2004
 #: netbox/navigation/menu.py:90 templates/dcim/device/base.html:49
 #: templates/dcim/device_list.html:57 templates/dcim/devicetype/base.html:46
 msgid "Device Bays"
-msgstr ""
+msgstr "设备托架"
 
 #: dcim/tables/devicetypes.py:137 dcim/views.py:1050 dcim/views.py:1985
 #: netbox/navigation/menu.py:89 templates/dcim/device/base.html:46
 #: templates/dcim/device_list.html:64 templates/dcim/devicetype/base.html:43
 msgid "Module Bays"
-msgstr ""
+msgstr "模块托架"
 
-#: dcim/tables/power.py:36 netbox/navigation/menu.py:282
+#: dcim/tables/power.py:36 netbox/navigation/menu.py:296
 #: templates/core/configrevision.html:59 templates/dcim/powerpanel.html:53
 msgid "Power Feeds"
-msgstr ""
+msgstr "供电"
 
 #: dcim/tables/power.py:80 templates/dcim/powerfeed.html:106
 msgid "Max Utilization"
@@ -5589,7 +5589,7 @@ msgstr ""
 
 #: dcim/tables/power.py:84
 msgid "Available Power (VA)"
-msgstr ""
+msgstr "可用功率"
 
 #: dcim/tables/racks.py:29 dcim/tables/sites.py:138
 #: netbox/navigation/menu.py:25 netbox/navigation/menu.py:27
@@ -5976,7 +5976,7 @@ msgstr ""
 
 #: extras/dashboard/widgets.py:211
 msgid "Object List"
-msgstr ""
+msgstr "对象列表"
 
 #: extras/dashboard/widgets.py:212
 msgid "Display an arbitrary list of objects."
@@ -6197,7 +6197,7 @@ msgstr ""
 #: extras/forms/filtersets.py:259 extras/forms/model_forms.py:47
 #: extras/forms/model_forms.py:223 tenancy/forms/filtersets.py:91
 msgid "Object type"
-msgstr ""
+msgstr "对象类型"
 
 #: extras/forms/bulk_import.py:47
 msgid "Object type (for object or multi-object fields)"
@@ -6353,7 +6353,7 @@ msgid "Cluster groups"
 msgstr ""
 
 #: extras/forms/filtersets.py:395 extras/forms/model_forms.py:438
-#: netbox/navigation/menu.py:243 netbox/navigation/menu.py:245
+#: netbox/navigation/menu.py:257 netbox/navigation/menu.py:259
 #: templates/virtualization/clustertype.html:33
 #: virtualization/tables/clusters.py:23 virtualization/tables/clusters.py:45
 msgid "Clusters"
@@ -6389,7 +6389,7 @@ msgstr ""
 
 #: extras/forms/model_forms.py:58 templates/extras/customfield.html:11
 msgid "Custom Field"
-msgstr ""
+msgstr "自定义字段"
 
 #: extras/forms/model_forms.py:61 templates/extras/customfield.html:60
 msgid "Behavior"
@@ -6419,11 +6419,11 @@ msgstr ""
 
 #: extras/forms/model_forms.py:132 templates/extras/customlink.html:10
 msgid "Custom Link"
-msgstr ""
+msgstr "自定义链接"
 
 #: extras/forms/model_forms.py:133
 msgid "Templates"
-msgstr ""
+msgstr "模板"
 
 #: extras/forms/model_forms.py:145
 #, python-brace-format
@@ -6700,7 +6700,7 @@ msgstr ""
 
 #: extras/models/customfields.py:119
 msgid "Custom fields within the same group will be displayed together"
-msgstr ""
+msgstr "在相同组里的自定义字段将一起显示"
 
 #: extras/models/customfields.py:127
 msgid "required"
@@ -7793,7 +7793,7 @@ msgid "Authentication key"
 msgstr ""
 
 #: ipam/forms/bulk_edit.py:404 ipam/forms/filtersets.py:369
-#: ipam/forms/model_forms.py:441 netbox/navigation/menu.py:376
+#: ipam/forms/model_forms.py:441 netbox/navigation/menu.py:390
 #: templates/ipam/fhrpgroup.html:51
 #: templates/wireless/inc/authentication_attrs.html:5
 #: wireless/forms/bulk_edit.py:90 wireless/forms/bulk_edit.py:137
@@ -7939,7 +7939,7 @@ msgid "{ip} is not assigned to this device/VM."
 msgstr ""
 
 #: ipam/forms/filtersets.py:46 ipam/forms/model_forms.py:60
-#: netbox/navigation/menu.py:177 vpn/forms/model_forms.py:409
+#: netbox/navigation/menu.py:191 vpn/forms/model_forms.py:409
 msgid "Route Targets"
 msgstr ""
 
@@ -8060,7 +8060,7 @@ msgstr ""
 
 #: ipam/forms/model_forms.py:256 templates/ipam/iprange.html:11
 msgid "IP Range"
-msgstr ""
+msgstr "IP范围"
 
 #: ipam/forms/model_forms.py:285 ipam/forms/model_forms.py:440
 #: templates/ipam/fhrpgroup.html:19 templates/ipam/ipaddress_edit.html:52
@@ -8108,11 +8108,11 @@ msgstr ""
 
 #: ipam/forms/model_forms.py:659 templates/ipam/servicetemplate.html:12
 msgid "Service Template"
-msgstr ""
+msgstr "服务模板"
 
 #: ipam/forms/model_forms.py:710
 msgid "Service template"
-msgstr ""
+msgstr "服务模板"
 
 #: ipam/forms/model_forms.py:740
 msgid ""
@@ -8188,7 +8188,7 @@ msgstr ""
 msgid "IP space managed by this RIR is considered private"
 msgstr ""
 
-#: ipam/models/ip.py:71 netbox/navigation/menu.py:170
+#: ipam/models/ip.py:71 netbox/navigation/menu.py:184
 msgid "RIRs"
 msgstr ""
 
@@ -8477,8 +8477,8 @@ msgid "The primary function of this VLAN"
 msgstr ""
 
 #: ipam/models/vlans.py:215 ipam/tables/ip.py:175 ipam/tables/vlans.py:78
-#: ipam/views.py:960 netbox/navigation/menu.py:181
-#: netbox/navigation/menu.py:183
+#: ipam/views.py:960 netbox/navigation/menu.py:195
+#: netbox/navigation/menu.py:197
 msgid "VLANs"
 msgstr ""
 
@@ -8510,8 +8510,8 @@ msgstr ""
 msgid "Prevent duplicate prefixes/IP addresses within this VRF"
 msgstr ""
 
-#: ipam/models/vrfs.py:63 netbox/navigation/menu.py:174
-#: netbox/navigation/menu.py:176
+#: ipam/models/vrfs.py:63 netbox/navigation/menu.py:188
+#: netbox/navigation/menu.py:190
 msgid "VRFs"
 msgstr ""
 
@@ -8539,8 +8539,8 @@ msgstr ""
 msgid "Provider Count"
 msgstr ""
 
-#: ipam/tables/ip.py:94 netbox/navigation/menu.py:167
-#: netbox/navigation/menu.py:169
+#: ipam/tables/ip.py:94 netbox/navigation/menu.py:181
+#: netbox/navigation/menu.py:183
 msgid "Aggregates"
 msgstr ""
 
@@ -8549,8 +8549,8 @@ msgid "Added"
 msgstr ""
 
 #: ipam/tables/ip.py:127 ipam/tables/ip.py:165 ipam/tables/vlans.py:138
-#: ipam/views.py:349 netbox/navigation/menu.py:153
-#: netbox/navigation/menu.py:155 templates/ipam/vlan.html:87
+#: ipam/views.py:349 netbox/navigation/menu.py:167
+#: netbox/navigation/menu.py:169 templates/ipam/vlan.html:87
 msgid "Prefixes"
 msgstr ""
 
@@ -8561,9 +8561,9 @@ msgstr ""
 msgid "Utilization"
 msgstr ""
 
-#: ipam/tables/ip.py:170 netbox/navigation/menu.py:149
+#: ipam/tables/ip.py:170 netbox/navigation/menu.py:163
 msgid "IP Ranges"
-msgstr ""
+msgstr "IP范围"
 
 #: ipam/tables/ip.py:220
 msgid "Prefix (Flat)"
@@ -8999,15 +8999,15 @@ msgstr "租户组"
 
 #: netbox/navigation/menu.py:48
 msgid "Contact Groups"
-msgstr ""
+msgstr "联系人组"
 
 #: netbox/navigation/menu.py:49 templates/tenancy/contactrole.html:8
 msgid "Contact Roles"
-msgstr ""
+msgstr "联系人角色"
 
 #: netbox/navigation/menu.py:50
 msgid "Contact Assignments"
-msgstr ""
+msgstr "联系人分配"
 
 #: netbox/navigation/menu.py:64
 msgid "Modules"
@@ -9020,7 +9020,7 @@ msgstr "设备角色"
 #: netbox/navigation/menu.py:68 templates/dcim/device.html:162
 #: templates/dcim/virtualdevicecontext.html:8
 msgid "Virtual Device Contexts"
-msgstr ""
+msgstr "虚拟设备上下文"
 
 #: netbox/navigation/menu.py:76
 msgid "Manufacturers"
@@ -9028,7 +9028,7 @@ msgstr "厂商"
 
 #: netbox/navigation/menu.py:80
 msgid "Device Components"
-msgstr ""
+msgstr "设备组件"
 
 #: netbox/navigation/menu.py:92 templates/dcim/inventoryitemrole.html:8
 msgid "Inventory Item Roles"
@@ -9062,86 +9062,95 @@ msgstr "电源连接"
 msgid "Wireless LAN Groups"
 msgstr "无线局域网组"
 
-#: netbox/navigation/menu.py:156
-msgid "Prefix & VLAN Roles"
-msgstr ""
+#: netbox/navigation/menu.py:142 templates/ipam/service.html:22
+#: templates/ipam/service_create.html:8 templates/ipam/service_edit.html:8
+msgid "Service"
+msgstr "服务"
 
-#: netbox/navigation/menu.py:162
-msgid "ASN Ranges"
-msgstr ""
+#: netbox/navigation/menu.py:146
+msgid "Application Service"
+msgstr "应用服务"
 
-#: netbox/navigation/menu.py:184
-msgid "VLAN Groups"
-msgstr ""
-
-#: netbox/navigation/menu.py:191
-msgid "Service Templates"
-msgstr ""
-
-#: netbox/navigation/menu.py:192 templates/dcim/device.html:304
+#: netbox/navigation/menu.py:148 templates/dcim/device.html:304
 #: templates/ipam/ipaddress.html:122
 #: templates/virtualization/virtualmachine.html:157
 msgid "Services"
+msgstr "服务"
+
+#: netbox/navigation/menu.py:149
+msgid "Service Templates"
+msgstr "服务模板"
+
+#: netbox/navigation/menu.py:170
+msgid "Prefix & VLAN Roles"
 msgstr ""
 
-#: netbox/navigation/menu.py:199
+#: netbox/navigation/menu.py:176
+msgid "ASN Ranges"
+msgstr ""
+
+#: netbox/navigation/menu.py:198
+msgid "VLAN Groups"
+msgstr ""
+
+#: netbox/navigation/menu.py:213
 msgid "VPN"
 msgstr ""
 
-#: netbox/navigation/menu.py:203 netbox/navigation/menu.py:205
+#: netbox/navigation/menu.py:217 netbox/navigation/menu.py:219
 #: vpn/tables/tunnels.py:24
 msgid "Tunnels"
 msgstr ""
 
-#: netbox/navigation/menu.py:206 templates/vpn/tunnelgroup.html:8
+#: netbox/navigation/menu.py:220 templates/vpn/tunnelgroup.html:8
 msgid "Tunnel Groups"
 msgstr ""
 
-#: netbox/navigation/menu.py:207
+#: netbox/navigation/menu.py:221
 msgid "Tunnel Terminations"
 msgstr ""
 
-#: netbox/navigation/menu.py:211 netbox/navigation/menu.py:213
+#: netbox/navigation/menu.py:225 netbox/navigation/menu.py:227
 #: vpn/models/l2vpn.py:64
 msgid "L2VPNs"
 msgstr ""
 
-#: netbox/navigation/menu.py:214 templates/vpn/l2vpn.html:57
+#: netbox/navigation/menu.py:228 templates/vpn/l2vpn.html:57
 #: templates/vpn/tunnel.html:73 vpn/tables/tunnels.py:58
 msgid "Terminations"
 msgstr ""
 
-#: netbox/navigation/menu.py:220
+#: netbox/navigation/menu.py:234
 msgid "IKE Proposals"
 msgstr ""
 
-#: netbox/navigation/menu.py:221 templates/vpn/ikeproposal.html:42
+#: netbox/navigation/menu.py:235 templates/vpn/ikeproposal.html:42
 msgid "IKE Policies"
 msgstr ""
 
-#: netbox/navigation/menu.py:222
+#: netbox/navigation/menu.py:236
 msgid "IPSec Proposals"
 msgstr ""
 
-#: netbox/navigation/menu.py:223 templates/vpn/ipsecproposal.html:38
+#: netbox/navigation/menu.py:237 templates/vpn/ipsecproposal.html:38
 msgid "IPSec Policies"
 msgstr ""
 
-#: netbox/navigation/menu.py:224 templates/vpn/ikepolicy.html:39
+#: netbox/navigation/menu.py:238 templates/vpn/ikepolicy.html:39
 #: templates/vpn/ipsecpolicy.html:26
 msgid "IPSec Profiles"
 msgstr ""
 
-#: netbox/navigation/menu.py:231 templates/dcim/device_edit.html:78
+#: netbox/navigation/menu.py:245 templates/dcim/device_edit.html:78
 msgid "Virtualization"
 msgstr "虚拟化"
 
-#: netbox/navigation/menu.py:235 netbox/navigation/menu.py:237
+#: netbox/navigation/menu.py:249 netbox/navigation/menu.py:251
 #: virtualization/views.py:195
 msgid "Virtual Machines"
 msgstr "虚拟机"
 
-#: netbox/navigation/menu.py:239
+#: netbox/navigation/menu.py:253
 #: templates/virtualization/virtualmachine.html:177
 #: templates/virtualization/virtualmachine/base.html:32
 #: templates/virtualization/virtualmachine_list.html:21
@@ -9149,51 +9158,51 @@ msgstr "虚拟机"
 msgid "Virtual Disks"
 msgstr "虚拟硬盘"
 
-#: netbox/navigation/menu.py:246
+#: netbox/navigation/menu.py:260
 msgid "Cluster Types"
 msgstr "群集类型"
 
-#: netbox/navigation/menu.py:247
+#: netbox/navigation/menu.py:261
 msgid "Cluster Groups"
 msgstr "群集组"
 
-#: netbox/navigation/menu.py:261
+#: netbox/navigation/menu.py:275
 msgid "Circuit Types"
 msgstr "电路类型"
 
-#: netbox/navigation/menu.py:265 netbox/navigation/menu.py:267
+#: netbox/navigation/menu.py:279 netbox/navigation/menu.py:281
 msgid "Providers"
 msgstr "供应商"
 
-#: netbox/navigation/menu.py:268 templates/circuits/provider.html:53
+#: netbox/navigation/menu.py:282 templates/circuits/provider.html:53
 msgid "Provider Accounts"
 msgstr "供应商账号"
 
-#: netbox/navigation/menu.py:269
+#: netbox/navigation/menu.py:283
 msgid "Provider Networks"
 msgstr "供应商网络"
 
-#: netbox/navigation/menu.py:283
+#: netbox/navigation/menu.py:297
 msgid "Power Panels"
 msgstr ""
 
-#: netbox/navigation/menu.py:294
+#: netbox/navigation/menu.py:308
 msgid "Configurations"
 msgstr "配置"
 
-#: netbox/navigation/menu.py:296
+#: netbox/navigation/menu.py:310
 msgid "Config Contexts"
 msgstr "配置上下文"
 
-#: netbox/navigation/menu.py:297
+#: netbox/navigation/menu.py:311
 msgid "Config Templates"
 msgstr "配置模板"
 
-#: netbox/navigation/menu.py:304 netbox/navigation/menu.py:308
+#: netbox/navigation/menu.py:318 netbox/navigation/menu.py:322
 msgid "Customization"
 msgstr "定制"
 
-#: netbox/navigation/menu.py:310
+#: netbox/navigation/menu.py:324
 #: templates/circuits/circuittermination_edit.html:53
 #: templates/dcim/cable_edit.html:77 templates/dcim/device_edit.html:103
 #: templates/dcim/inventoryitem_edit.html:102 templates/dcim/rack_edit.html:81
@@ -9209,105 +9218,105 @@ msgstr "定制"
 msgid "Custom Fields"
 msgstr "自定义字段"
 
-#: netbox/navigation/menu.py:311
+#: netbox/navigation/menu.py:325
 msgid "Custom Field Choices"
-msgstr ""
+msgstr "自定义字段选项"
 
-#: netbox/navigation/menu.py:312
+#: netbox/navigation/menu.py:326
 msgid "Custom Links"
-msgstr ""
+msgstr "自定义链接"
 
-#: netbox/navigation/menu.py:313
+#: netbox/navigation/menu.py:327
 msgid "Export Templates"
-msgstr ""
+msgstr "导出模板"
 
-#: netbox/navigation/menu.py:314
+#: netbox/navigation/menu.py:328
 msgid "Saved Filters"
-msgstr ""
+msgstr "已保存过滤器"
 
-#: netbox/navigation/menu.py:316
+#: netbox/navigation/menu.py:330
 msgid "Image Attachments"
-msgstr ""
+msgstr "图片附件"
 
-#: netbox/navigation/menu.py:320
+#: netbox/navigation/menu.py:334
 msgid "Reports & Scripts"
 msgstr ""
 
-#: netbox/navigation/menu.py:340
+#: netbox/navigation/menu.py:354
 msgid "Operations"
 msgstr "操作"
 
-#: netbox/navigation/menu.py:344
+#: netbox/navigation/menu.py:358
 msgid "Integrations"
 msgstr "集成"
 
-#: netbox/navigation/menu.py:346
+#: netbox/navigation/menu.py:360
 msgid "Data Sources"
 msgstr "数据源"
 
-#: netbox/navigation/menu.py:347
+#: netbox/navigation/menu.py:361
 msgid "Event Rules"
 msgstr "事件规则"
 
-#: netbox/navigation/menu.py:348
+#: netbox/navigation/menu.py:362
 msgid "Webhooks"
 msgstr ""
 
-#: netbox/navigation/menu.py:352 netbox/navigation/menu.py:356
+#: netbox/navigation/menu.py:366 netbox/navigation/menu.py:370
 #: netbox/views/generic/feature_views.py:151
 #: templates/extras/report/base.html:37 templates/extras/script/base.html:36
 msgid "Jobs"
 msgstr "任务"
 
-#: netbox/navigation/menu.py:362
+#: netbox/navigation/menu.py:376
 msgid "Logging"
 msgstr "日志"
 
-#: netbox/navigation/menu.py:364
+#: netbox/navigation/menu.py:378
 msgid "Journal Entries"
 msgstr ""
 
-#: netbox/navigation/menu.py:365 templates/extras/objectchange.html:8
+#: netbox/navigation/menu.py:379 templates/extras/objectchange.html:8
 #: templates/extras/objectchange_list.html:4
 msgid "Change Log"
 msgstr ""
 
-#: netbox/navigation/menu.py:372 templates/inc/profile_button.html:18
+#: netbox/navigation/menu.py:386 templates/inc/profile_button.html:18
 msgid "Admin"
 msgstr "管理后台"
 
-#: netbox/navigation/menu.py:381 templates/users/group.html:27
+#: netbox/navigation/menu.py:395 templates/users/group.html:27
 #: users/forms/model_forms.py:243 users/forms/model_forms.py:256
 #: users/forms/model_forms.py:310 users/tables.py:105
 msgid "Users"
 msgstr "用户"
 
-#: netbox/navigation/menu.py:404 users/forms/model_forms.py:183
+#: netbox/navigation/menu.py:418 users/forms/model_forms.py:183
 #: users/forms/model_forms.py:196 users/forms/model_forms.py:315
 #: users/tables.py:35 users/tables.py:109
 msgid "Groups"
 msgstr "组"
 
-#: netbox/navigation/menu.py:426 templates/account/base.html:21
+#: netbox/navigation/menu.py:440 templates/account/base.html:21
 #: templates/inc/profile_button.html:39
 msgid "API Tokens"
 msgstr ""
 
-#: netbox/navigation/menu.py:433 users/forms/model_forms.py:189
+#: netbox/navigation/menu.py:447 users/forms/model_forms.py:189
 #: users/forms/model_forms.py:198 users/forms/model_forms.py:249
 #: users/forms/model_forms.py:257
 msgid "Permissions"
 msgstr ""
 
-#: netbox/navigation/menu.py:445
+#: netbox/navigation/menu.py:459
 msgid "Current Config"
 msgstr ""
 
-#: netbox/navigation/menu.py:451
+#: netbox/navigation/menu.py:465
 msgid "Config Revisions"
 msgstr ""
 
-#: netbox/navigation/menu.py:491 templates/500.html:35
+#: netbox/navigation/menu.py:506 templates/500.html:35
 #: templates/account/preferences.html:29
 msgid "Plugins"
 msgstr ""
@@ -9834,7 +9843,7 @@ msgstr ""
 #: utilities/templates/buttons/add.html:4
 #: utilities/templates/helpers/table_config_form.html:20
 msgid "Add"
-msgstr ""
+msgstr "增加"
 
 #: templates/circuits/inc/circuit_termination.html:14
 #: templates/circuits/inc/circuit_termination.html:63
@@ -10180,7 +10189,7 @@ msgstr ""
 
 #: templates/dcim/device.html:153
 msgid "View Virtual Chassis"
-msgstr ""
+msgstr "查看虚拟机箱"
 
 #: templates/dcim/device.html:170
 msgid "Create VDC"
@@ -10290,19 +10299,19 @@ msgstr ""
 
 #: templates/dcim/device/modulebays.html:10
 msgid "Add Module Bays"
-msgstr ""
+msgstr "增加模块托架"
 
 #: templates/dcim/device/poweroutlets.html:24
 msgid "Add Power Outlets"
-msgstr ""
+msgstr "增加电源插座"
 
 #: templates/dcim/device/powerports.html:24
 msgid "Add Power Port"
-msgstr ""
+msgstr "增加电源端口"
 
 #: templates/dcim/device/rearports.html:24
 msgid "Add Rear Ports"
-msgstr ""
+msgstr "增加后端口"
 
 #: templates/dcim/device/render_config.html:5
 #: templates/virtualization/virtualmachine/render_config.html:5
@@ -10753,11 +10762,11 @@ msgstr ""
 
 #: templates/dcim/site.html:56
 msgid "Facility"
-msgstr ""
+msgstr "设施"
 
 #: templates/dcim/site.html:64
 msgid "Time Zone"
-msgstr ""
+msgstr "时区"
 
 #: templates/dcim/site.html:67
 msgid "UTC"
@@ -10787,38 +10796,38 @@ msgstr ""
 
 #: templates/dcim/sitegroup.html:64
 msgid "Add Site Group"
-msgstr ""
+msgstr "添加站点组"
 
 #: templates/dcim/trace/attachment.html:5
 #: templates/extras/exporttemplate.html:37
 msgid "Attachment"
-msgstr ""
+msgstr "附件"
 
 #: templates/dcim/virtualchassis.html:86
 msgid "Add Member"
-msgstr ""
+msgstr "增加成员"
 
 #: templates/dcim/virtualchassis_add.html:18
 msgid "Member Devices"
-msgstr ""
+msgstr "成员设备"
 
 #: templates/dcim/virtualchassis_add_member.html:6
 #, python-format
 msgid "Add New Member to Virtual Chassis %(virtual_chassis)s"
-msgstr ""
+msgstr "增加新成员到虚拟机架 %(virtual_chassis)s"
 
 #: templates/dcim/virtualchassis_add_member.html:17
 msgid "Add New Member"
-msgstr ""
+msgstr "增加新成员"
 
 #: templates/dcim/virtualchassis_add_member.html:25
 msgid "Add Another"
-msgstr ""
+msgstr "增加另一个"
 
 #: templates/dcim/virtualchassis_edit.html:7
 #, python-format
 msgid "Editing Virtual Chassis %(name)s"
-msgstr ""
+msgstr "编辑虚拟机架 %(name)s"
 
 #: templates/dcim/virtualchassis_edit.html:54
 msgid "Rack/Unit"
@@ -10826,18 +10835,18 @@ msgstr ""
 
 #: templates/dcim/virtualchassis_remove_member.html:5
 msgid "Remove Virtual Chassis Member"
-msgstr ""
+msgstr "移除虚拟机架成员"
 
 #: templates/dcim/virtualchassis_remove_member.html:9
 #, python-format
 msgid ""
 "Are you sure you want to remove <strong>%(device)s</strong> from virtual "
 "chassis %(name)s?"
-msgstr ""
+msgstr "确认从虚拟机架%(name)s中移除<strong>%(device)s</strong>？"
 
 #: templates/dcim/virtualdevicecontext.html:29 templates/vpn/l2vpn.html:19
 msgid "Identifier"
-msgstr ""
+msgstr "标识符"
 
 #: templates/exceptions/import_error.html:6
 msgid ""
@@ -11478,11 +11487,11 @@ msgstr ""
 
 #: templates/generic/bulk_rename.html:16
 msgid "Current Name"
-msgstr ""
+msgstr "当前名称"
 
 #: templates/generic/bulk_rename.html:17
 msgid "New Name"
-msgstr ""
+msgstr "新名称"
 
 #: templates/generic/bulk_rename.html:40
 #: utilities/templates/widgets/markdown_input.html:11
@@ -11504,12 +11513,12 @@ msgstr ""
 #: templates/generic/object_children.html:27
 #: utilities/templates/buttons/bulk_edit.html:4
 msgid "Edit Selected"
-msgstr ""
+msgstr "编辑所选"
 
 #: templates/generic/object_children.html:41
 #: utilities/templates/buttons/bulk_delete.html:4
 msgid "Delete Selected"
-msgstr ""
+msgstr "删除所选"
 
 #: templates/generic/object_edit.html:19
 #, python-format
@@ -11793,7 +11802,7 @@ msgstr ""
 
 #: templates/ipam/prefix/ip_ranges.html:7
 msgid "Add IP Range"
-msgstr ""
+msgstr "增加IP范围"
 
 #: templates/ipam/prefix_list.html:7
 msgid "Hide Depth Indicators"
@@ -11831,18 +11840,13 @@ msgstr ""
 msgid "Exporting L2VPNs"
 msgstr ""
 
-#: templates/ipam/service.html:22 templates/ipam/service_create.html:8
-#: templates/ipam/service_edit.html:8
-msgid "Service"
-msgstr ""
-
 #: templates/ipam/service_create.html:43
 msgid "From Template"
 msgstr ""
 
 #: templates/ipam/service_create.html:48
 msgid "Custom"
-msgstr ""
+msgstr "自定义"
 
 #: templates/ipam/service_edit.html:37
 msgid "Port(s)"
@@ -11934,7 +11938,7 @@ msgstr ""
 #: tenancy/forms/forms.py:56 tenancy/forms/model_forms.py:109
 #: tenancy/forms/model_forms.py:132 tenancy/tables/contacts.py:98
 msgid "Contact"
-msgstr ""
+msgstr "联系人"
 
 #: templates/tenancy/contact.html:30 tenancy/forms/bulk_edit.py:98
 msgid "Title"
@@ -11956,33 +11960,33 @@ msgstr ""
 #: templates/tenancy/contactgroup.html:19 tenancy/forms/forms.py:66
 #: tenancy/forms/model_forms.py:76
 msgid "Contact Group"
-msgstr ""
+msgstr "联系人组"
 
 #: templates/tenancy/contactgroup.html:57
 msgid "Add Contact Group"
-msgstr ""
+msgstr "增加联系人组"
 
 #: templates/tenancy/contactrole.html:15 tenancy/filtersets.py:141
 #: tenancy/forms/forms.py:61 tenancy/forms/model_forms.py:90
 msgid "Contact Role"
-msgstr ""
+msgstr "联系人角色"
 
 #: templates/tenancy/object_contacts.html:9
 msgid "Add a contact"
-msgstr ""
+msgstr "增加联系人"
 
 #: templates/tenancy/tenantgroup.html:17
 msgid "Add Tenant"
-msgstr ""
+msgstr "增加租户"
 
 #: templates/tenancy/tenantgroup.html:27 tenancy/forms/model_forms.py:31
 #: tenancy/tables/columns.py:51 tenancy/tables/columns.py:61
 msgid "Tenant Group"
-msgstr ""
+msgstr "租户组"
 
 #: templates/tenancy/tenantgroup.html:66
 msgid "Add Tenant Group"
-msgstr ""
+msgstr "增加租户组"
 
 #: templates/users/group.html:37 templates/users/user.html:65
 msgid "Assigned Permissions"
@@ -11991,7 +11995,7 @@ msgstr ""
 #: templates/users/objectpermission.html:6
 #: templates/users/objectpermission.html:14 users/forms/filtersets.py:67
 msgid "Permission"
-msgstr ""
+msgstr "权限"
 
 #: templates/users/objectpermission.html:33 users/forms/filtersets.py:68
 #: users/forms/model_forms.py:322
@@ -12026,12 +12030,12 @@ msgstr ""
 #: templates/virtualization/cluster.html:64
 #: templates/virtualization/virtualmachine.html:132
 msgid "Memory"
-msgstr ""
+msgstr "内存"
 
 #: templates/virtualization/cluster.html:74
 #: templates/virtualization/virtualmachine.html:143
 msgid "Disk Space"
-msgstr ""
+msgstr "磁盘空间"
 
 #: templates/virtualization/cluster.html:77
 #: templates/virtualization/virtualdisk.html:33
@@ -12042,20 +12046,20 @@ msgstr ""
 
 #: templates/virtualization/cluster/base.html:18
 msgid "Add Virtual Machine"
-msgstr ""
+msgstr "添加虚拟机"
 
 #: templates/virtualization/cluster/base.html:24
 msgid "Assign Device"
-msgstr ""
+msgstr "分配设备"
 
 #: templates/virtualization/cluster/devices.html:10
 msgid "Remove Selected"
-msgstr ""
+msgstr "迁移所选"
 
 #: templates/virtualization/cluster_add_devices.html:9
 #, python-format
 msgid "Add Device to Cluster %(cluster)s"
-msgstr ""
+msgstr "添加设备到 %(cluster)s 群集"
 
 #: templates/virtualization/cluster_add_devices.html:23
 msgid "Device Selection"
@@ -12518,7 +12522,6 @@ msgstr ""
 
 #: users/forms/model_forms.py:238
 msgid "Passwords do not match! Please check your input and try again."
- 
 msgstr "密码不匹配，请重试"
 
 #: users/forms/model_forms.py:304
@@ -12647,7 +12650,7 @@ msgstr "权限"
 
 #: users/tables.py:101
 msgid "Custom Actions"
-msgstr ""
+msgstr "自定义动作"
 
 #: utilities/choices.py:16
 #, python-brace-format
