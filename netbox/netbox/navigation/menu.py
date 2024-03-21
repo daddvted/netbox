@@ -138,6 +138,20 @@ WIRELESS_MENU = Menu(
     ),
 )
 
+SERVICE_MENU = Menu(
+    label=_('Service'),
+    icon_class='mdi mdi-counter',
+    groups=(
+        MenuGroup(
+            label=_('Application Service'),
+            items=(
+                get_model_item('ipam', 'service', _('Services')),
+                get_model_item('ipam', 'servicetemplate', _('Service Templates')),
+            ),
+        ),
+    ),
+)
+
 IPAM_MENU = Menu(
     label=_('IPAM'),
     icon_class='mdi mdi-counter',
@@ -188,8 +202,8 @@ IPAM_MENU = Menu(
             label=_('Other'),
             items=(
                 get_model_item('ipam', 'fhrpgroup', _('FHRP Groups')),
-                get_model_item('ipam', 'servicetemplate', _('Service Templates')),
-                get_model_item('ipam', 'service', _('Services')),
+                # get_model_item('ipam', 'servicetemplate', _('Service Templates')),
+                # get_model_item('ipam', 'service', _('Services')),
             ),
         ),
     ),
@@ -462,6 +476,7 @@ MENUS = [
     DEVICES_MENU,
     CONNECTIONS_MENU,
     WIRELESS_MENU,
+    SERVICE_MENU,
     IPAM_MENU,
     VPN_MENU,
     VIRTUALIZATION_MENU,
