@@ -934,11 +934,10 @@ class BulkSyncVmView(GetReturnURLMixin, BaseMultiObjectView):
                             # ====================================
                             cluster_type = obj.type.name.lower()
 
-                            vm_qs = VirtualMachine.objects.restrict(request.user, 'view').filter(cluster=obj)
-                            vm_qs.delete()
-                            logger.info(f'{vm_qs.count()} VMs in cluster({obj.name}) deleted')
-
-
+                            # Get authentication from comments of cluster
+                            # Format:
+                            #   username
+                            #   password
                             username, password = get_auth_from_comments(obj.comments)
                             if not username or not password:
                                 logger.error(f"Username or password not found in comments of cluster {obj.name}")
@@ -959,15 +958,25 @@ class BulkSyncVmView(GetReturnURLMixin, BaseMultiObjectView):
                                 return redirect(self.get_return_url(request))
 
                             for vm in vms:
-                                vm_instance = VirtualMachine()
-                                vm_instance.name = vm['name']
-                                vm_instance.status = vm['status']
-                                if vm.get('vcpus', 0):
-                                    vm_instance.vcpus = vm['vcpus']
-                                if vm.get('memory', 0):
-                                    vm_instance.memory = vm['memory']
-                                vm_instance.cluster = obj
-                                vm_instance.save()
+                                vm_in_db = VirtualMachine.objects.restrict(request.user, 'view').filter(cluster=obj, name__contains=vm['name'])
+                                if vm_in_db.count() == 0:
+                                    print(f"VM({vm['name']} not found in DB, add")
+
+                                    vm_instance = VirtualMachine()
+                                    vm_instance.name = vm['name']
+                                    vm_instance.status = vm['status']
+                                    if vm.get('vcpus', 0):
+                                        vm_instance.vcpus = vm['vcpus']
+                                    if vm.get('memory', 0):
+                                        vm_instance.memory = vm['memory']
+                                    vm_instance.cluster = obj
+                                    vm_instance.save()
+
+                                else:
+                                    print(f"Found {vm_in_db.count()} VMs in DB by search: {vm['name']}, skip")
+
+
+
 
 
                 except (ProtectedError, RestrictedError) as e:
