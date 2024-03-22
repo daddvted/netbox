@@ -552,7 +552,7 @@ msgstr "状态"
 #: wireless/forms/bulk_import.py:97 wireless/forms/filtersets.py:34
 #: wireless/forms/filtersets.py:74
 msgid "Tenant"
-msgstr ""
+msgstr "租户"
 
 #: circuits/forms/bulk_edit.py:142 circuits/forms/filtersets.py:174
 msgid "Install date"
@@ -1944,7 +1944,7 @@ msgstr ""
 
 #: dcim/choices.py:1212
 msgid "IEEE Standard"
-msgstr ""
+msgstr "IEEE标准"
 
 #: dcim/choices.py:1223
 msgid "Passive 24V (2-pair)"
@@ -2285,23 +2285,23 @@ msgstr "机柜"
 #: dcim/filtersets.py:1270 ipam/filtersets.py:572 ipam/filtersets.py:802
 #: ipam/filtersets.py:1032 vpn/filtersets.py:346
 msgid "Device (name)"
-msgstr ""
+msgstr "设备（名称）"
 
 #: dcim/filtersets.py:1281
 msgid "Device type (model)"
-msgstr ""
+msgstr "设备类型（模块）"
 
 #: dcim/filtersets.py:1286 dcim/filtersets.py:1309
 msgid "Device role (ID)"
-msgstr ""
+msgstr "设备角色（ID）"
 
 #: dcim/filtersets.py:1292 dcim/filtersets.py:1315
 msgid "Device role (slug)"
-msgstr ""
+msgstr "设备角色（slug）"
 
 #: dcim/filtersets.py:1297
 msgid "Virtual Chassis (ID)"
-msgstr ""
+msgstr "虚拟机架（ID）"
 
 #: dcim/filtersets.py:1303 dcim/forms/filtersets.py:106
 #: dcim/tables/devices.py:239 netbox/navigation/menu.py:67
@@ -7764,7 +7764,7 @@ msgstr ""
 
 #: ipam/forms/bulk_edit.py:349 ipam/models/ip.py:771
 msgid "DNS name"
-msgstr ""
+msgstr "域名"
 
 #: ipam/forms/bulk_edit.py:370 ipam/forms/bulk_edit.py:569
 #: ipam/forms/bulk_import.py:393 ipam/forms/bulk_import.py:477
@@ -7773,12 +7773,12 @@ msgstr ""
 #: templates/ipam/inc/panels/fhrp_groups.html:11 templates/ipam/service.html:35
 #: templates/ipam/servicetemplate.html:20
 msgid "Protocol"
-msgstr ""
+msgstr "协议"
 
 #: ipam/forms/bulk_edit.py:377 ipam/forms/filtersets.py:383
 #: ipam/tables/fhrp.py:22 templates/ipam/fhrpgroup.html:27
 msgid "Group ID"
-msgstr ""
+msgstr "组ID"
 
 #: ipam/forms/bulk_edit.py:382 ipam/forms/filtersets.py:388
 #: wireless/forms/bulk_edit.py:67 wireless/forms/bulk_edit.py:114
@@ -7786,11 +7786,11 @@ msgstr ""
 #: wireless/forms/bulk_import.py:104 wireless/forms/bulk_import.py:107
 #: wireless/forms/filtersets.py:53 wireless/forms/filtersets.py:87
 msgid "Authentication type"
-msgstr ""
+msgstr "授权类型"
 
 #: ipam/forms/bulk_edit.py:387 ipam/forms/filtersets.py:392
 msgid "Authentication key"
-msgstr ""
+msgstr "授权密钥"
 
 #: ipam/forms/bulk_edit.py:404 ipam/forms/filtersets.py:369
 #: ipam/forms/model_forms.py:441 netbox/navigation/menu.py:390
@@ -7800,43 +7800,43 @@ msgstr ""
 #: wireless/forms/filtersets.py:35 wireless/forms/filtersets.py:75
 #: wireless/forms/model_forms.py:56 wireless/forms/model_forms.py:161
 msgid "Authentication"
-msgstr ""
+msgstr "授权"
 
 #: ipam/forms/bulk_edit.py:414
 msgid "Minimum child VLAN VID"
-msgstr ""
+msgstr "最小子VLAN ID"
 
 #: ipam/forms/bulk_edit.py:420
 msgid "Maximum child VLAN VID"
-msgstr ""
+msgstr "最大子VLAN ID"
 
 #: ipam/forms/bulk_edit.py:428 ipam/forms/model_forms.py:513
 msgid "Scope type"
-msgstr ""
+msgstr "范围类型"
 
 #: ipam/forms/bulk_edit.py:489 ipam/forms/model_forms.py:586
 #: ipam/tables/vlans.py:71 templates/ipam/vlangroup.html:39
 msgid "Scope"
-msgstr ""
+msgstr "范围"
 
 #: ipam/forms/bulk_edit.py:560
 msgid "Site & Group"
-msgstr ""
+msgstr "站点 & 组"
 
 #: ipam/forms/bulk_edit.py:574 ipam/forms/model_forms.py:649
 #: ipam/forms/model_forms.py:683 ipam/tables/services.py:19
 #: ipam/tables/services.py:49 templates/ipam/service.html:39
 #: templates/ipam/servicetemplate.html:24
 msgid "Ports"
-msgstr ""
+msgstr "端口"
 
 #: ipam/forms/bulk_import.py:47
 msgid "Import route targets"
-msgstr ""
+msgstr "导入路由目标"
 
 #: ipam/forms/bulk_import.py:53
 msgid "Export route targets"
-msgstr ""
+msgstr "导出路由目标"
 
 #: ipam/forms/bulk_import.py:91 ipam/forms/bulk_import.py:111
 #: ipam/forms/bulk_import.py:131
@@ -7873,15 +7873,15 @@ msgstr ""
 #: virtualization/forms/model_forms.py:291 vpn/forms/bulk_import.py:93
 #: vpn/forms/bulk_import.py:290
 msgid "Virtual machine"
-msgstr ""
+msgstr "虚拟机"
 
 #: ipam/forms/bulk_import.py:314
 msgid "Parent VM of assigned interface (if any)"
-msgstr ""
+msgstr "分配接口的父虚拟机"
 
 #: ipam/forms/bulk_import.py:321
 msgid "Assigned interface"
-msgstr ""
+msgstr "分配的接口"
 
 #: ipam/forms/bulk_import.py:324
 msgid "Is primary"
@@ -9370,27 +9370,27 @@ msgstr ""
 
 #: netbox/plugins/templates.py:35
 msgid "extra_context must be a dictionary"
-msgstr ""
+msgstr "extra_context必须为字典"
 
 #: netbox/preferences.py:19
 msgid "Color mode"
-msgstr ""
+msgstr "色彩模式"
 
 #: netbox/preferences.py:21
 msgid "Light"
-msgstr ""
+msgstr "浅色"
 
 #: netbox/preferences.py:22
 msgid "Dark"
-msgstr ""
+msgstr "深色"
 
 #: netbox/preferences.py:27
 msgid "Language"
-msgstr ""
+msgstr "语言"
 
 #: netbox/preferences.py:34
 msgid "Page length"
-msgstr ""
+msgstr "分页大小"
 
 #: netbox/preferences.py:36
 msgid "The default number of objects to display per page"
@@ -9398,15 +9398,15 @@ msgstr ""
 
 #: netbox/preferences.py:40
 msgid "Paginator placement"
-msgstr ""
+msgstr "导航器位置"
 
 #: netbox/preferences.py:42
 msgid "Bottom"
-msgstr ""
+msgstr "底部"
 
 #: netbox/preferences.py:43
 msgid "Top"
-msgstr ""
+msgstr "顶部"
 
 #: netbox/preferences.py:44
 msgid "Both"
@@ -9418,7 +9418,7 @@ msgstr ""
 
 #: netbox/preferences.py:52
 msgid "Data format"
-msgstr ""
+msgstr "数据格式"
 
 #: netbox/registry.py:14
 #, python-brace-format
@@ -9435,35 +9435,35 @@ msgstr ""
 
 #: netbox/settings.py:724
 msgid "English"
-msgstr ""
+msgstr "英语"
 
 #: netbox/settings.py:725
 msgid "Chinese"
-msgstr ""
+msgstr "中文"
 
 #: netbox/settings.py:726
 msgid "Spanish"
-msgstr ""
+msgstr "西班牙语"
 
 #: netbox/settings.py:727
 msgid "French"
-msgstr ""
+msgstr "法语"
 
 #: netbox/settings.py:728
 msgid "Japanese"
-msgstr ""
+msgstr "日语"
 
 #: netbox/settings.py:729
 msgid "Portuguese"
-msgstr ""
+msgstr "葡萄牙语"
 
 #: netbox/settings.py:730
 msgid "Russian"
-msgstr ""
+msgstr "俄语"
 
 #: netbox/settings.py:731
 msgid "Turkish"
-msgstr ""
+msgstr "土耳其语"
 
 #: netbox/tables/columns.py:175
 msgid "Toggle all"
@@ -9479,15 +9479,15 @@ msgstr ""
 
 #: netbox/tables/tables.py:243 templates/generic/bulk_import.html:115
 msgid "Field"
-msgstr ""
+msgstr "字段"
 
 #: netbox/tables/tables.py:246
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 #: netbox/tables/tables.py:259
 msgid "No results found"
-msgstr ""
+msgstr "未查找到结果"
 
 #: netbox/tests/dummy_plugin/navigation.py:29
 msgid "Dummy Plugin"
@@ -9500,7 +9500,7 @@ msgstr ""
 
 #: netbox/views/generic/feature_views.py:38
 msgid "Changelog"
-msgstr ""
+msgstr "变更记录"
 
 #: netbox/views/generic/feature_views.py:91
 msgid "Journal"
@@ -9527,15 +9527,15 @@ msgstr ""
 
 #: templates/404.html:4
 msgid "Page Not Found"
-msgstr ""
+msgstr "页面未找到"
 
 #: templates/404.html:9
 msgid "The requested page does not exist"
-msgstr ""
+msgstr "请求页面不存在"
 
 #: templates/500.html:7 templates/500.html:18
 msgid "Server Error"
-msgstr ""
+msgstr "服务器错误"
 
 #: templates/500.html:23
 msgid "There was a problem with your request. Please contact an administrator"
@@ -9547,11 +9547,11 @@ msgstr ""
 
 #: templates/500.html:33
 msgid "Python version"
-msgstr ""
+msgstr "Python版本"
 
 #: templates/500.html:34
 msgid "NetBox version"
-msgstr ""
+msgstr "NetBox版本"
 
 #: templates/500.html:36
 msgid "None installed"
@@ -9604,7 +9604,7 @@ msgstr "更改密码"
 #: templates/virtualization/cluster_add_devices.html:30
 #: templates/virtualization/cluster_sync_vm.html:46
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: templates/account/password.html:18 templates/account/preferences.html:83
 #: templates/dcim/devicebay_populate.html:35
@@ -9617,7 +9617,7 @@ msgstr ""
 #: utilities/templates/helpers/applied_filters.html:16
 #: utilities/templates/helpers/table_config_form.html:40
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: templates/account/preferences.html:41
 msgid "Table Configurations"
@@ -9633,15 +9633,15 @@ msgstr ""
 
 #: templates/account/preferences.html:55
 msgid "Table"
-msgstr ""
+msgstr "表格"
 
 #: templates/account/preferences.html:56
 msgid "Ordering"
-msgstr ""
+msgstr "排序"
 
 #: templates/account/preferences.html:57
 msgid "Columns"
-msgstr ""
+msgstr "列"
 
 #: templates/account/preferences.html:76 templates/dcim/cable_trace.html:113
 #: templates/extras/object_configcontext.html:55
@@ -11651,7 +11651,7 @@ msgstr ""
 #: templates/inc/table_controls_htmx.html:16
 #: templates/inc/table_controls_htmx.html:18
 msgid "Configure Table"
-msgstr ""
+msgstr "配置表格"
 
 #: templates/ipam/aggregate.html:15 templates/ipam/ipaddress.html:17
 #: templates/ipam/iprange.html:16 templates/ipam/prefix.html:16
@@ -12444,27 +12444,27 @@ msgstr ""
 
 #: tenancy/tables/contacts.py:132
 msgid "Contact Description"
-msgstr ""
+msgstr "联系人描述"
 
 #: users/filtersets.py:48 users/filtersets.py:151
 msgid "Group (name)"
-msgstr ""
+msgstr "组（名称）"
 
 #: users/forms/bulk_edit.py:24
 msgid "First name"
-msgstr ""
+msgstr "名"
 
 #: users/forms/bulk_edit.py:29
 msgid "Last name"
-msgstr ""
+msgstr "姓"
 
 #: users/forms/bulk_edit.py:41
 msgid "Staff status"
-msgstr ""
+msgstr "人员状态"
 
 #: users/forms/bulk_edit.py:46
 msgid "Superuser status"
-msgstr ""
+msgstr "超级用户状态"
 
 #: users/forms/bulk_import.py:43
 msgid "If no key is provided, one will be generated automatically."
@@ -13141,11 +13141,11 @@ msgstr ""
 
 #: virtualization/forms/bulk_edit.py:169
 msgid "Memory (MB)"
-msgstr ""
+msgstr "内存（MB）"
 
 #: virtualization/forms/bulk_edit.py:173
 msgid "Disk (GB)"
-msgstr ""
+msgstr "硬盘（GB）"
 
 #: virtualization/forms/bulk_edit.py:333 virtualization/forms/filtersets.py:243
 msgid "Size (GB)"

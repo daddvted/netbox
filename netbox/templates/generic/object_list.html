@@ -21,7 +21,9 @@ Context:
   return_url: Return URL to use for bulk actions (optional)
 {% endcomment %}
 
-{% block title %}{{ model|meta:"verbose_name_plural"|bettertitle }}{% endblock %}
+{% block title %}
+    {{ model|meta:"verbose_name_plural"|bettertitle }}
+{% endblock %}
 
 {% block controls %}
   <div class="controls">
