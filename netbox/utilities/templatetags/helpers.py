@@ -10,6 +10,7 @@ from django.template.defaultfilters import date
 from django.urls import NoReverseMatch, reverse
 from django.utils import timezone
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy
 
 from utilities.forms import get_selected_values, TableConfigForm
 from utilities.utils import get_viewname
@@ -35,6 +36,7 @@ __all__ = (
     'utilization_graph',
     'validated_viewname',
     'viewname',
+    'template_trans',
 )
 
 register = template.Library()
@@ -331,3 +333,11 @@ def applied_filters(context, model, form, query_params):
         'applied_filters': applied_filters,
         'save_link': save_link,
     }
+
+
+@register.filter(name='template_trans')
+def template_trans(text):
+    try:
+        return gettext_lazy(text)
+    except Exception as e:
+        return text

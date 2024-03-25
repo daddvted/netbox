@@ -19,10 +19,13 @@ Context:
     export, bulk_edit, and bulk_delete.
   filter_form: The bound filterset form for filtering the objects list (optional)
   return_url: Return URL to use for bulk actions (optional)
+  {% blocktranslate with model_t=model|meta:"verbose_name_plural"|bettertitle %}
 {% endcomment %}
 
 {% block title %}
-    {{ model|meta:"verbose_name_plural"|bettertitle }}
+  {% blocktranslate with model_t=model|meta:"verbose_name_plural"|bettertitle|template_trans %}
+    {{ model_t }}
+  {% endblocktranslate %}
 {% endblock %}
 
 {% block controls %}
