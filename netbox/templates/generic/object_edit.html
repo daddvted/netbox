@@ -1,5 +1,6 @@
 {% extends 'base/layout.html' %}
 {% load i18n %}
+{% load helpers %}
 
 {% comment %}
 Blocks:
@@ -14,7 +15,7 @@ Context:
 
 {% block title %}
   {% if object.pk %}
-    {% trans "Editing" %} {{ object|meta:"verbose_name" }} {{ object }}
+    {% trans "Editing" %} {{ object|meta:"verbose_name"|bettertitle|template_trans }} {{ object }}
   {% else %}
     {% blocktrans trimmed with object_type=object|meta:"verbose_name" %}
       Add a new {{ object_type }}

@@ -1,4 +1,5 @@
 from django import template
+from django.utils.translation import gettext_lazy
 
 __all__ = (
     'getfield',
@@ -50,9 +51,14 @@ def render_field(field, bulk_nullable=False, label=None):
     """
     Render a single form field from template
     """
+    try:
+        lbl = label or field.label
+        label = gettext_lazy(lbl)
+    except Exception as e:
+        label = lbl
     return {
         'field': field,
-        'label': label or field.label,
+        'label': label,
         'bulk_nullable': bulk_nullable,
     }
 

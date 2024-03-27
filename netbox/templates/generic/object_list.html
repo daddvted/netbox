@@ -23,9 +23,7 @@ Context:
 {% endcomment %}
 
 {% block title %}
-  {% blocktranslate with model_t=model|meta:"verbose_name_plural"|bettertitle|template_trans %}
-    {{ model_t }}
-  {% endblocktranslate %}
+    {{ model|meta:"verbose_name_plural"|bettertitle|template_trans }}
 {% endblock %}
 
 {% block controls %}
