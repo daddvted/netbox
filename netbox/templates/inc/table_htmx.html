@@ -1,3 +1,4 @@
+{% load helpers %}
 {% load django_tables2 %}
 <table{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
   {% if table.show_header %}
@@ -20,7 +21,7 @@
                  hx-get="{{ table.htmx_url }}{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}"
                  hx-target="closest .htmx-container"
                  {% if not table.embedded %}hx-push-url="true"{% endif %}
-              >{{ column.header }}</a>
+              >{{ column.header | template_trans}}</a>
             </th>
           {% else %}
             <th {{ column.attrs.th.as_html }}>{{ column.header }}</th>
