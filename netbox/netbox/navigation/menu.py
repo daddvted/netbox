@@ -140,7 +140,7 @@ WIRELESS_MENU = Menu(
 
 SERVICE_MENU = Menu(
     label=_('Service'),
-    icon_class='mdi mdi-counter',
+    icon_class='mdi mdi-apps',
     groups=(
         MenuGroup(
             label=_('Application Service'),
