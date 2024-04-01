@@ -41,6 +41,5 @@ def get_model_urls(app_label, model_name):
         paths.append(
             path(url_path, view_, name=name, kwargs=config['kwargs'])
         )
-    print(f"DEBUG+++++++: {paths}")
 
     return paths
