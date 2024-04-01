@@ -1,7 +1,10 @@
+from django import forms
 from django.contrib.auth.forms import (
+    UsernameField,
     AuthenticationForm,
     PasswordChangeForm as DjangoPasswordChangeForm,
 )
+from django.utils.translation import gettext_lazy as _
 
 from utilities.forms import BootstrapMixin
 
@@ -15,7 +18,10 @@ class LoginForm(BootstrapMixin, AuthenticationForm):
     """
     Used to authenticate a user by username and password.
     """
-    pass
+    username = UsernameField(
+        label=_("Username"),
+        widget=forms.TextInput(attrs={"autofocus": True})
+        )
 
 
 class PasswordChangeForm(BootstrapMixin, DjangoPasswordChangeForm):

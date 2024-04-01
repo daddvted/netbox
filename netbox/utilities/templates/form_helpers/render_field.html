@@ -39,7 +39,7 @@
       </div>
     {# Default field rendering #}
     {% else %}
-      {{ field }}
+      {{ field }} 
     {% endif %}
 
     {# Display any error messages #}
@@ -55,7 +55,7 @@
 
     {# Help text #}
     {% if field.help_text %}
-      <span class="form-text">{{ field.help_text|safe }}</span>
+      <span class="form-text">{{ field.help_text|safe|template_trans }}</span>
     {% endif %}
 
     {# For bulk edit forms, include an option to nullify the field #}

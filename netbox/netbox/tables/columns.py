@@ -216,8 +216,8 @@ class ActionsColumn(tables.Column):
     empty_values = ()
     actions = {
         'edit': ActionsItem('Edit', 'pencil', 'change', 'warning'),
-        'delete': ActionsItem('Delete', 'trash-can-outline', 'delete', 'danger'),
-        'changelog': ActionsItem('Changelog', 'history'),
+        'delete': ActionsItem(_('Delete'), 'trash-can-outline', 'delete', 'danger'),
+        'changelog': ActionsItem(_('Changelog'), 'history'),
     }
 
     def __init__(self, *args, actions=('edit', 'delete', 'changelog'), extra_buttons='', split_actions=True, **kwargs):

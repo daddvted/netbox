@@ -612,10 +612,10 @@ class RackElevationListView(generic.ObjectListView):
 
         # Ordering
         ORDERING_CHOICES = {
-            'name': 'Name (A-Z)',
-            '-name': 'Name (Z-A)',
-            'facility_id': 'Facility ID (A-Z)',
-            '-facility_id': 'Facility ID (Z-A)',
+            'name': _('Name (A-Z)'),
+            '-name': _('Name (Z-A)'),
+            'facility_id': _('Facility ID (A-Z)'),
+            '-facility_id': _('Facility ID (Z-A)'),
         }
         sort = request.GET.get('sort', 'name')
         if sort not in ORDERING_CHOICES:
