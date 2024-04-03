@@ -25,6 +25,8 @@ from .base import BaseObjectView
 from .mixins import ActionsMixin, TableMixin
 from .utils import get_prerequisite_model
 
+from ipam.models import Service
+
 __all__ = (
     'ComponentCreateView',
     'ObjectChildrenView',
@@ -248,8 +250,14 @@ class ObjectEditView(GetReturnURLMixin, BaseObjectView):
         Args:
             request: The current request
         """
+        original_device = ""
         logger = logging.getLogger('netbox.views.ObjectEditView')
         obj = self.get_object(**kwargs)
+
+        # --- SPECIAL CASE ---
+        # Keep original device name
+        if isinstance(obj, Service) and obj.device:
+            original_device = obj.device
 
         # Take a snapshot for change logging (if editing an existing object)
         if obj.pk and hasattr(obj, 'snapshot'):
@@ -267,6 +275,15 @@ class ObjectEditView(GetReturnURLMixin, BaseObjectView):
                 with transaction.atomic():
                     object_created = form.instance.pk is None
                     obj = form.save()
+
+                    # --- SPECIAL CASE ---
+                    # Fill original device back, when user does not has device related permissions
+                    if isinstance(obj, Service):
+                        if not obj.virtual_machine and not obj.device:
+                            if original_device:
+                                obj.device = original_device
+                                obj.save()
+
 
                     # Check that the new object conforms with any assigned object-level permissions
                     if not self.queryset.filter(pk=obj.pk).exists():
