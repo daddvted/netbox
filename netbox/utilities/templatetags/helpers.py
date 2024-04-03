@@ -337,6 +337,7 @@ def applied_filters(context, model, form, query_params):
 
 @register.filter(name='template_trans')
 def template_trans(text):
+    # print('[template_trans][debug]: {text}')
     try:
         return gettext_lazy(text)
     except Exception as e:

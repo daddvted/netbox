@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 13:29+0000\n"
+"POT-Creation-Date: 2024-04-03 05:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -930,7 +930,7 @@ msgstr ""
 #: vpn/models/crypto.py:221 vpn/models/l2vpn.py:22 vpn/models/tunnels.py:35
 #: wireless/models.py:50
 msgid "name"
-msgstr ""
+msgstr "名称"
 
 #: circuits/models/providers.py:25
 msgid "Full name of the provider"
@@ -1392,7 +1392,7 @@ msgstr "用户偏好设置"
 #: core/forms/model_forms.py:155 dcim/forms/filtersets.py:658
 #: templates/core/configrevision.html:193 users/forms/model_forms.py:64
 msgid "Miscellaneous"
-msgstr ""
+msgstr "其他参数"
 
 #: core/forms/model_forms.py:158
 msgid "Config Revision"
@@ -1870,7 +1870,7 @@ msgstr "无线"
 
 #: dcim/choices.py:950
 msgid "Virtual interfaces"
-msgstr ""
+msgstr "虚拟接口"
 
 #: dcim/choices.py:953 dcim/forms/bulk_edit.py:1295
 #: dcim/forms/bulk_import.py:785 dcim/forms/model_forms.py:876
@@ -2428,7 +2428,7 @@ msgstr ""
 #: netbox/navigation/menu.py:329 netbox/tables/columns.py:448
 #: templates/circuits/inc/circuit_termination.html:119
 #: templates/generic/bulk_edit.html:81 templates/inc/panels/tags.html:5
-#: utilities/forms/fields/fields.py:81
+#: utilities/forms/fields/fields.py:82
 msgid "Tags"
 msgstr "标签"
 
@@ -2441,7 +2441,7 @@ msgstr "标签"
 #: templates/dcim/virtualchassis.html:59
 #: templates/dcim/virtualchassis_edit.html:56
 msgid "Position"
-msgstr ""
+msgstr "位置"
 
 #: dcim/forms/bulk_create.py:114
 msgid ""
@@ -2547,7 +2547,7 @@ msgstr "序列号"
 #: dcim/forms/filtersets.py:740 dcim/forms/filtersets.py:880
 #: dcim/forms/filtersets.py:1430
 msgid "Asset tag"
-msgstr "资料标签"
+msgstr "资产标签"
 
 #: dcim/forms/bulk_edit.py:286 dcim/forms/bulk_import.py:220
 #: dcim/forms/filtersets.py:291 templates/dcim/rack.html:91
@@ -2577,7 +2577,7 @@ msgstr ""
 
 #: dcim/forms/bulk_edit.py:315
 msgid "Mounting depth"
-msgstr ""
+msgstr "安装深度"
 
 #: dcim/forms/bulk_edit.py:320 dcim/forms/bulk_edit.py:349
 #: dcim/forms/bulk_edit.py:434 dcim/forms/bulk_edit.py:457
@@ -2598,7 +2598,7 @@ msgstr ""
 #: templates/extras/configcontext.html:18 templates/extras/customlink.html:26
 #: templates/extras/savedfilter.html:34 templates/ipam/role.html:33
 msgid "Weight"
-msgstr ""
+msgstr "重量"
 
 #: dcim/forms/bulk_edit.py:325 dcim/forms/filtersets.py:316
 msgid "Max weight"
@@ -3166,7 +3166,7 @@ msgstr ""
 #: dcim/forms/bulk_import.py:455 dcim/forms/bulk_import.py:459
 #: dcim/forms/model_forms.py:468
 msgid "Virtual chassis"
-msgstr ""
+msgstr "虚拟机架"
 
 #: dcim/forms/bulk_import.py:462 dcim/forms/model_forms.py:457
 #: dcim/tables/devices.py:235 extras/filtersets.py:501
@@ -3219,7 +3219,7 @@ msgstr ""
 
 #: dcim/forms/bulk_import.py:528
 msgid "Airflow direction"
-msgstr ""
+msgstr "气流方向"
 
 #: dcim/forms/bulk_import.py:589
 msgid "The device in which this module is installed"
@@ -3655,7 +3655,7 @@ msgid "Reservation"
 msgstr ""
 
 #: dcim/forms/model_forms.py:301 dcim/forms/model_forms.py:384
-#: utilities/forms/fields/fields.py:47
+#: utilities/forms/fields/fields.py:48
 msgid "Slug"
 msgstr "短标识符"
 
@@ -4303,7 +4303,7 @@ msgstr ""
 #: dcim/models/device_components.py:746
 #: virtualization/models/virtualmachines.py:370
 msgid "interface"
-msgstr ""
+msgstr "接口"
 
 #: dcim/models/device_components.py:747
 #: virtualization/models/virtualmachines.py:371
@@ -4511,11 +4511,11 @@ msgstr "序列号"
 #: dcim/models/device_components.py:1238 dcim/models/devices.py:605
 #: dcim/models/devices.py:1182 dcim/models/racks.py:120
 msgid "asset tag"
-msgstr ""
+msgstr "资产标签"
 
 #: dcim/models/device_components.py:1239
 msgid "A unique tag used to identify this item"
-msgstr ""
+msgstr "用于识别该对象的唯一标签"
 
 #: dcim/models/device_components.py:1242
 msgid "discovered"
@@ -4605,7 +4605,7 @@ msgstr ""
 
 #: dcim/models/devices.py:128 dcim/models/devices.py:649
 msgid "airflow"
-msgstr ""
+msgstr "气流"
 
 #: dcim/models/devices.py:204
 msgid "device type"
@@ -4693,7 +4693,7 @@ msgstr ""
 
 #: dcim/models/devices.py:640
 msgid "rack face"
-msgstr ""
+msgstr "机柜朝向"
 
 #: dcim/models/devices.py:660 dcim/models/devices.py:1392
 #: virtualization/models/virtualmachines.py:98
@@ -4707,7 +4707,7 @@ msgstr ""
 
 #: dcim/models/devices.py:676
 msgid "out-of-band IP"
-msgstr ""
+msgstr "带外IP"
 
 #: dcim/models/devices.py:693
 msgid "VC position"
@@ -4986,11 +4986,11 @@ msgstr "机柜角色"
 
 #: dcim/models/racks.py:74
 msgid "facility ID"
-msgstr ""
+msgstr "设施ID"
 
 #: dcim/models/racks.py:75
 msgid "Locally-assigned identifier"
-msgstr ""
+msgstr "本地分配的标识符"
 
 #: dcim/models/racks.py:108 ipam/forms/bulk_import.py:200
 #: ipam/forms/bulk_import.py:265 ipam/forms/bulk_import.py:300
@@ -5000,7 +5000,7 @@ msgstr ""
 
 #: dcim/models/racks.py:121
 msgid "A unique tag used to identify this rack"
-msgstr ""
+msgstr "用户识别该机柜的唯一标签"
 
 #: dcim/models/racks.py:132
 msgid "width"
@@ -5016,7 +5016,7 @@ msgstr ""
 
 #: dcim/models/racks.py:143
 msgid "starting unit"
-msgstr ""
+msgstr "起始单元"
 
 #: dcim/models/racks.py:145
 msgid "Starting unit for rack"
@@ -7452,7 +7452,7 @@ msgstr "大小（字节）"
 #: templates/extras/customfield.html:96 templates/extras/eventrule.html:32
 #: templates/users/objectpermission.html:68 users/tables.py:83
 msgid "Object Types"
-msgstr ""
+msgstr "对象类型"
 
 #: extras/tables/tables.py:255
 msgid "SSL Validation"
@@ -8434,7 +8434,7 @@ msgstr "服务"
 
 #: ipam/models/services.py:103
 msgid "services"
-msgstr ""
+msgstr "服务"
 
 #: ipam/models/services.py:117
 msgid ""
@@ -9415,7 +9415,7 @@ msgstr "分页大小"
 
 #: netbox/preferences.py:36
 msgid "The default number of objects to display per page"
-msgstr ""
+msgstr "每页显示对象的默认数量"
 
 #: netbox/preferences.py:40
 msgid "Paginator placement"
@@ -9647,11 +9647,11 @@ msgstr "保存"
 
 #: templates/account/preferences.html:41
 msgid "Table Configurations"
-msgstr ""
+msgstr "表格配置"
 
 #: templates/account/preferences.html:46
 msgid "Clear table preferences"
-msgstr ""
+msgstr "清除表格首选项"
 
 #: templates/account/preferences.html:53
 msgid "Toggle All"
@@ -9693,20 +9693,20 @@ msgstr "账号已创建"
 
 #: templates/account/profile.html:38 templates/users/user.html:34
 msgid "Last Login"
-msgstr ""
+msgstr "最近登录"
 
 #: templates/account/profile.html:42 templates/users/user.html:46
 msgid "Superuser"
-msgstr ""
+msgstr "超级管理员"
 
 #: templates/account/profile.html:46
 msgid "Admin Access"
-msgstr ""
+msgstr "管理员访问权限"
 
 #: templates/account/profile.html:55 templates/users/objectpermission.html:86
 #: templates/users/user.html:55
 msgid "Assigned Groups"
-msgstr ""
+msgstr "已分配用户组"
 
 #: templates/account/profile.html:60
 #: templates/circuits/circuit_terminations_swap.html:18
@@ -9731,7 +9731,7 @@ msgstr ""
 
 #: templates/account/profile.html:70 templates/users/user.html:80
 msgid "Recent Activity"
-msgstr ""
+msgstr "最新动态"
 
 #: templates/account/token.html:8 templates/account/token_list.html:6
 msgid "My API Tokens"
@@ -9750,7 +9750,7 @@ msgstr ""
 
 #: templates/account/token.html:52 templates/users/token.html:44
 msgid "Last used"
-msgstr ""
+msgstr "最近使用"
 
 #: templates/account/token_list.html:12
 msgid "Add a Token"
@@ -10267,7 +10267,7 @@ msgstr ""
 #: templates/dcim/device.html:312
 #: templates/virtualization/virtualmachine.html:165
 msgid "Add a service"
-msgstr ""
+msgstr "添加服务"
 
 #: templates/dcim/device.html:319 templates/dcim/rack.html:77
 #: templates/dcim/rack_edit.html:38
@@ -10736,11 +10736,11 @@ msgstr ""
 
 #: templates/dcim/rack_edit.html:21
 msgid "Inventory Control"
-msgstr ""
+msgstr "库存控制"
 
 #: templates/dcim/rack_edit.html:45
 msgid "Outer Dimensions"
-msgstr ""
+msgstr "外部尺寸"
 
 #: templates/dcim/rack_edit.html:56 templates/dcim/rack_edit.html:71
 msgid "Unit"
@@ -12880,23 +12880,24 @@ msgid ""
 msgstr ""
 
 #: utilities/forms/fields/fields.py:31
-#, python-brace-format
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "<i class=\"mdi mdi-information-outline\"></i> <a href=\"{url}\" target="
+#| "\"_blank\" tabindex=\"-1\">Markdown</a> syntax is supported2"
 msgid ""
 "<i class=\"mdi mdi-information-outline\"></i> <a href=\"{url}\" target="
 "\"_blank\" tabindex=\"-1\">Markdown</a> syntax is supported"
-msgstr ""
-"支持<i class=\"mdi mdi-information-outline\"></i> <a href=\"{url}\" target="
-"\"_blank\" tabindex=\"-1\">Markdown</a>语法"
+msgstr "支持Makrdown语法{url}"
 
-#: utilities/forms/fields/fields.py:48
+#: utilities/forms/fields/fields.py:49
 msgid "URL-friendly unique shorthand"
-msgstr "URL友好的唯一简写"
+msgstr "方便URL生成的短标识符"
 
-#: utilities/forms/fields/fields.py:101
+#: utilities/forms/fields/fields.py:102
 msgid "Enter context data in <a href=\"https://json.org/\">JSON</a> format."
 msgstr ""
 
-#: utilities/forms/fields/fields.py:124
+#: utilities/forms/fields/fields.py:125
 msgid "MAC address must be in EUI-48 format"
 msgstr ""
 
@@ -13169,7 +13170,7 @@ msgstr ""
 #: virtualization/forms/bulk_edit.py:165
 #: virtualization/models/virtualmachines.py:113
 msgid "vCPUs"
-msgstr ""
+msgstr "虚拟CPU"
 
 #: virtualization/forms/bulk_edit.py:169
 msgid "Memory (MB)"
@@ -13181,7 +13182,7 @@ msgstr "硬盘（GB）"
 
 #: virtualization/forms/bulk_edit.py:333 virtualization/forms/filtersets.py:243
 msgid "Size (GB)"
-msgstr ""
+msgstr "大小（GB）"
 
 #: virtualization/forms/bulk_import.py:44
 msgid "Type of cluster"
@@ -13336,11 +13337,11 @@ msgstr ""
 
 #: virtualization/models/virtualmachines.py:431
 msgid "virtual disk"
-msgstr ""
+msgstr "虚拟硬盘"
 
 #: virtualization/models/virtualmachines.py:432
 msgid "virtual disks"
-msgstr ""
+msgstr "虚拟硬盘"
 
 #: vpn/choices.py:31
 msgid "IPsec - Transport"

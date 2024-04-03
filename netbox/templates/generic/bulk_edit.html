@@ -59,7 +59,7 @@ Context:
                       <div class="field-group mb-5">
                         <div class="row mb-2">
                           <h5 class="offset-sm-3">
-                            {% if group %}{{ group }}{% else %}{{ model|meta:"verbose_name"|bettertitle }}{% endif %}
+                            {% if group %}{{ group }}{% else %}{{ model|meta:"verbose_name"|bettertitle|template_trans }}{% endif %}
                           </h5>
                         </div>
                         {% for name in fields %}
