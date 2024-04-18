@@ -1145,13 +1145,13 @@ msgstr ""
 #: templates/extras/script/base.html:14 templates/extras/script_list.html:6
 #: templates/extras/script_list.html:20 templates/extras/script_result.html:18
 msgid "Scripts"
-msgstr ""
+msgstr "脚本"
 
 #: core/choices.py:36 netbox/navigation/menu.py:338
 #: templates/extras/report/base.html:13 templates/extras/report_list.html:7
 #: templates/extras/report_list.html:12
 msgid "Reports"
-msgstr ""
+msgstr "报表"
 
 #: core/choices.py:54 extras/choices.py:207
 msgid "Pending"
@@ -1231,7 +1231,7 @@ msgstr ""
 #: users/forms/filtersets.py:71 users/tables.py:86
 #: virtualization/forms/bulk_edit.py:216 virtualization/forms/filtersets.py:207
 msgid "Enabled"
-msgstr ""
+msgstr "启用"
 
 #: core/forms/bulk_edit.py:33 extras/forms/model_forms.py:204
 #: templates/extras/savedfilter.html:57 vpn/forms/filtersets.py:95
@@ -1257,17 +1257,17 @@ msgstr ""
 #: templates/extras/exporttemplate.html:41
 #: templates/virtualization/virtualmachine/render_config.html:19
 msgid "Data Source"
-msgstr ""
+msgstr "数据源"
 
 #: core/forms/filtersets.py:51 core/forms/mixins.py:21
 msgid "File"
-msgstr ""
+msgstr "文件"
 
 #: core/forms/filtersets.py:56 core/forms/mixins.py:16
 #: extras/forms/filtersets.py:147 extras/forms/filtersets.py:336
 #: extras/forms/filtersets.py:422
 msgid "Data source"
-msgstr ""
+msgstr "数据源"
 
 #: core/forms/filtersets.py:64 extras/forms/filtersets.py:449
 msgid "Creation"
@@ -1337,7 +1337,7 @@ msgstr ""
 
 #: core/forms/model_forms.py:94
 msgid "File Upload"
-msgstr ""
+msgstr "文件上传"
 
 #: core/forms/model_forms.py:106
 msgid "Cannot upload a file and sync from an existing file"
@@ -3113,7 +3113,7 @@ msgstr ""
 #: dcim/tables/racks.py:153 templates/dcim/rackreservation.html:12
 #: templates/dcim/rackreservation.html:52
 msgid "Units"
-msgstr ""
+msgstr "单位"
 
 #: dcim/forms/bulk_import.py:279
 msgid "Comma-separated list of individual unit numbers"
@@ -3642,7 +3642,7 @@ msgstr "联系人信息"
 
 #: dcim/forms/model_forms.py:197 templates/dcim/rackrole.html:20
 msgid "Rack Role"
-msgstr ""
+msgstr "机柜角色"
 
 #: dcim/forms/model_forms.py:248
 msgid ""
@@ -3652,7 +3652,7 @@ msgstr ""
 
 #: dcim/forms/model_forms.py:259 dcim/tables/racks.py:133
 msgid "Reservation"
-msgstr ""
+msgstr "预留"
 
 #: dcim/forms/model_forms.py:301 dcim/forms/model_forms.py:384
 #: utilities/forms/fields/fields.py:48
@@ -3762,7 +3762,7 @@ msgstr ""
 
 #: dcim/forms/model_forms.py:1446 templates/dcim/inventoryitemrole.html:15
 msgid "Inventory Item Role"
-msgstr ""
+msgstr "库存物品角色"
 
 #: dcim/forms/model_forms.py:1466 templates/dcim/device.html:195
 #: templates/dcim/virtualdevicecontext.html:33
@@ -4308,7 +4308,7 @@ msgstr "接口"
 #: dcim/models/device_components.py:747
 #: virtualization/models/virtualmachines.py:371
 msgid "interfaces"
-msgstr ""
+msgstr "接口"
 
 #: dcim/models/device_components.py:758
 #, python-brace-format
@@ -5114,11 +5114,11 @@ msgstr ""
 
 #: dcim/models/racks.py:548
 msgid "rack reservation"
-msgstr ""
+msgstr "机柜预留"
 
 #: dcim/models/racks.py:549
 msgid "rack reservations"
-msgstr ""
+msgstr "机柜预留"
 
 #: dcim/models/racks.py:566
 #, python-brace-format
@@ -5453,7 +5453,7 @@ msgstr ""
 #: templates/dcim/inc/panels/inventory_items.html:5
 #: templates/dcim/inventoryitemrole.html:33
 msgid "Inventory Items"
-msgstr ""
+msgstr "库存物品"
 
 #: dcim/tables/devices.py:732
 #: templates/circuits/inc/circuit_termination.html:80
@@ -6646,7 +6646,7 @@ msgstr ""
 
 #: extras/models/configs.py:131
 msgid "config contexts"
-msgstr ""
+msgstr "配置上下文"
 
 #: extras/models/configs.py:149 extras/models/configs.py:205
 msgid "JSON data must be in object form. Example:"
@@ -7295,23 +7295,23 @@ msgstr ""
 
 #: extras/models/reports.py:46
 msgid "report module"
-msgstr ""
+msgstr "报表模块"
 
 #: extras/models/reports.py:47
 msgid "report modules"
-msgstr ""
+msgstr "报表模块"
 
 #: extras/models/scripts.py:46
 msgid "script module"
-msgstr ""
+msgstr "脚本模块"
 
 #: extras/models/scripts.py:47
 msgid "script modules"
-msgstr ""
+msgstr "脚本模块"
 
 #: extras/models/search.py:24
 msgid "timestamp"
-msgstr ""
+msgstr "时间戳"
 
 #: extras/models/search.py:39
 msgid "field"
@@ -7648,7 +7648,7 @@ msgstr ""
 #: ipam/forms/model_forms.py:430 templates/tenancy/contact.html:54
 #: tenancy/forms/bulk_edit.py:112
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 #: ipam/filtersets.py:445
 msgid "Ranges which contain this prefix or IP"
@@ -8983,7 +8983,7 @@ msgstr ""
 
 #: netbox/models/features.py:455
 msgid "auto sync enabled"
-msgstr ""
+msgstr "启用自动同步"
 
 #: netbox/models/features.py:457
 msgid "Enable automatic synchronization of data when the data file is updated"
@@ -9261,7 +9261,7 @@ msgstr "图片附件"
 
 #: netbox/navigation/menu.py:334
 msgid "Reports & Scripts"
-msgstr ""
+msgstr "报表 & 脚本"
 
 #: netbox/navigation/menu.py:354
 msgid "Operations"
@@ -11315,7 +11315,7 @@ msgstr ""
 
 #: templates/extras/report_list.html:125
 msgid "No Reports Found"
-msgstr ""
+msgstr "未找到报表"
 
 #: templates/extras/report_list.html:128
 #, python-format
@@ -12377,31 +12377,31 @@ msgstr ""
 
 #: tenancy/models/contacts.py:32
 msgid "contact group"
-msgstr ""
+msgstr "联系人组"
 
 #: tenancy/models/contacts.py:33
 msgid "contact groups"
-msgstr ""
+msgstr "联系人组"
 
 #: tenancy/models/contacts.py:48
 msgid "contact role"
-msgstr ""
+msgstr "联系人角色"
 
 #: tenancy/models/contacts.py:49
 msgid "contact roles"
-msgstr ""
+msgstr "联系人角色"
 
 #: tenancy/models/contacts.py:68
 msgid "title"
-msgstr ""
+msgstr "职位"
 
 #: tenancy/models/contacts.py:73
 msgid "phone"
-msgstr ""
+msgstr "电话"
 
 #: tenancy/models/contacts.py:78
 msgid "email"
-msgstr ""
+msgstr "邮箱"
 
 #: tenancy/models/contacts.py:87
 msgid "link"
@@ -12430,11 +12430,11 @@ msgstr ""
 
 #: tenancy/models/tenants.py:32
 msgid "tenant group"
-msgstr ""
+msgstr "租户组"
 
 #: tenancy/models/tenants.py:33
 msgid "tenant groups"
-msgstr ""
+msgstr "租户组"
 
 #: tenancy/models/tenants.py:70
 msgid "Tenant name must be unique per group."
