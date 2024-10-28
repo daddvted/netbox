@@ -30,8 +30,9 @@
         {% csrf_token %}
 
         {# Logo #}
-        <div class="mb-4">
-          <img src="{% static 'netbox_logo.svg' %}" height="80" alt="{% trans "NetBox logo" %}" />
+        <div class="mb-6">
+          {#<img src="{% static 'netbox_logo.svg' %}" height="80" alt="{% trans "NetBox logo" %}" />#}
+          <h1>基础设施管理系统</h1>
         </div>
 
         {# Set post-login URL #}
