@@ -1,0 +1,258 @@
+﻿kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: netbox-worker
+  namespace: netbox
+  labels:
+    app: netbox-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netbox-worker
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: netbox-worker
+      annotations:
+        kubesphere.io/creator: tedmule
+        kubesphere.io/imagepullsecrets: '{}'
+        logging.kubesphere.io/logsidecar-config: '{}'
+    spec:
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+            type: ''
+        - name: volume-d8bg3i
+          configMap:
+            name: config
+            items:
+              - key: configuration.py
+                path: configuration.py
+            defaultMode: 420
+        - name: volume-js5tpz
+          configMap:
+            name: config
+            items:
+              - key: ldap_config.py
+                path: ldap_config.py
+            defaultMode: 420
+      containers:
+        - name: container-g6oj0p
+          image: '192.168.6.99/devops/netbox:vm-cn'
+          command:
+            - /opt/netbox/venv/bin/python
+          args:
+            - /opt/netbox/netbox/manage.py
+            - rqworker
+          env:
+            - name: AUTH_LDAP_BIND_DN
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_BIND_DN
+            - name: AUTH_LDAP_BIND_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_BIND_PASSWORD
+            - name: AUTH_LDAP_GROUP_SEARCH_BASEDN
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_GROUP_SEARCH_BASEDN
+            - name: AUTH_LDAP_GROUP_SEARCH_CLASS
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_GROUP_SEARCH_CLASS
+            - name: AUTH_LDAP_GROUP_TYPE
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_GROUP_TYPE
+            - name: AUTH_LDAP_IS_ADMIN_DN
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_IS_ADMIN_DN
+            - name: AUTH_LDAP_IS_SUPERUSER_DN
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_IS_SUPERUSER_DN
+            - name: AUTH_LDAP_REQUIRE_GROUP_DN
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_REQUIRE_GROUP_DN
+            - name: AUTH_LDAP_SERVER_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_SERVER_URI
+            - name: AUTH_LDAP_USER_SEARCH_ATTR
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_USER_SEARCH_ATTR
+            - name: AUTH_LDAP_USER_SEARCH_BASEDN
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: AUTH_LDAP_USER_SEARCH_BASEDN
+            - name: CORS_ORIGIN_ALLOW_ALL
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: CORS_ORIGIN_ALLOW_ALL
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: DB_HOST
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: DB_NAME
+            - name: DB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: DB_PASSWORD
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: DB_USER
+            - name: ENABLE_LOCALIZATION
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: ENABLE_LOCALIZATION
+            - name: HOUSEKEEPING_INTERVAL
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: HOUSEKEEPING_INTERVAL
+            - name: MEDIA_ROOT
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: MEDIA_ROOT
+            - name: METRICS_ENABLED
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: METRICS_ENABLED
+            - name: REDIS_CACHE_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_CACHE_DATABASE
+            - name: REDIS_CACHE_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_CACHE_HOST
+            - name: REDIS_CACHE_INSECURE_SKIP_TLS_VERIFY
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_CACHE_INSECURE_SKIP_TLS_VERIFY
+            - name: REDIS_CACHE_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_CACHE_PORT
+            - name: REDIS_CACHE_SSL
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_CACHE_SSL
+            - name: REDIS_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_DATABASE
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_HOST
+            - name: REDIS_INSECURE_SKIP_TLS_VERIFY
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_INSECURE_SKIP_TLS_VERIFY
+            - name: REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_PORT
+            - name: REDIS_SSL
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REDIS_SSL
+            - name: REMOTE_AUTH_BACKEND
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REMOTE_AUTH_BACKEND
+            - name: REMOTE_AUTH_ENABLED
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: REMOTE_AUTH_ENABLED
+            - name: SECRET_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: SECRET_KEY
+            - name: SKIP_SUPERUSER
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: SKIP_SUPERUSER
+            - name: TIME_ZONE
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: TIME_ZONE
+            - name: WEBHOOKS_ENABLED
+              valueFrom:
+                configMapKeyRef:
+                  name: netbox
+                  key: WEBHOOKS_ENABLED
+          resources: {}
+          volumeMounts:
+            - name: host-time
+              readOnly: true
+              mountPath: /etc/localtime
+            - name: volume-d8bg3i
+              readOnly: true
+              mountPath: /etc/netbox/config
+            - name: volume-js5tpz
+              readOnly: true
+              mountPath: /etc/netbox/config/ldap
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      serviceAccountName: default
+      serviceAccount: default
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600

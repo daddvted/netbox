@@ -1,0 +1,43 @@
+﻿kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: netbox
+  namespace: netbox
+data:
+  AUTH_LDAP_BIND_DN: 'uid=globalreader,dc=ted,dc=mule'
+  AUTH_LDAP_BIND_PASSWORD: P@ssw0rdHexinp@5s
+  AUTH_LDAP_GROUP_SEARCH_BASEDN: 'ou=netbox,ou=Groups,domainName=st.mule,o=domains,dc=ted,dc=mule'
+  AUTH_LDAP_GROUP_SEARCH_CLASS: groupOfUniqueNames
+  AUTH_LDAP_GROUP_TYPE: GroupOfUniqueNamesType
+  AUTH_LDAP_IS_ADMIN_DN: 'cn=users,ou=netbox,ou=Groups,domainName=st.mule,o=domains,dc=ted,dc=mule'
+  AUTH_LDAP_IS_SUPERUSER_DN: 'cn=admin,ou=netbox,ou=Groups,domainName=st.mule,o=domains,dc=ted,dc=mule'
+  AUTH_LDAP_MIRROR_GROUPS: 'True'
+  AUTH_LDAP_REQUIRE_GROUP_DN: 'cn=users,ou=netbox,ou=Groups,domainName=st.mule,o=domains,dc=ted,dc=mule'
+  AUTH_LDAP_SERVER_URI: 'ldap://openldap.openldap'
+  AUTH_LDAP_USER_SEARCH_ATTR: uid
+  AUTH_LDAP_USER_SEARCH_BASEDN: 'ou=Users,domainName=st.mule,o=domains,dc=ted,dc=mule'
+  CORS_ORIGIN_ALLOW_ALL: 'True'
+  DB_HOST: postgres.devops-db
+  DB_NAME: netbox
+  DB_PASSWORD: Hexinp@5s
+  DB_USER: postgres
+  ENABLE_LOCALIZATION: 'true'
+  HOUSEKEEPING_INTERVAL: '86400'
+  MEDIA_ROOT: /opt/netbox/netbox/media
+  METRICS_ENABLED: 'false'
+  REDIS_CACHE_DATABASE: '1'
+  REDIS_CACHE_HOST: redis
+  REDIS_CACHE_INSECURE_SKIP_TLS_VERIFY: 'false'
+  REDIS_CACHE_PORT: '6379'
+  REDIS_CACHE_SSL: 'false'
+  REDIS_DATABASE: '0'
+  REDIS_HOST: redis
+  REDIS_INSECURE_SKIP_TLS_VERIFY: 'false'
+  REDIS_PORT: '6379'
+  REDIS_SSL: 'false'
+  REMOTE_AUTH_BACKEND: netbox.authentication.LDAPBackend
+  REMOTE_AUTH_ENABLED: 'True'
+  SECRET_KEY: '''r(m)9nLGnz$(_q3N4z1k(EFsMCjjjzx08x9VhNVcfd%6RF#r!6DE@+V5Zk2X'''
+  SKIP_SUPERUSER: 'true'
+  TIME_ZONE: Asia/Shanghai
+  WEBHOOKS_ENABLED: 'true'
