@@ -153,6 +153,7 @@ elif 'JOBRESULT_RETENTION' in environ:
 CORS_ORIGIN_ALLOW_ALL = _environ_get_and_map('CORS_ORIGIN_ALLOW_ALL', 'False', _AS_BOOL)
 CORS_ORIGIN_WHITELIST = _environ_get_and_map('CORS_ORIGIN_WHITELIST', 'https://localhost', _AS_LIST)
 CORS_ORIGIN_REGEX_WHITELIST = [re.compile(r) for r in _environ_get_and_map('CORS_ORIGIN_REGEX_WHITELIST', '', _AS_LIST)]
+SECURE_CROSS_ORIGIN_OPENER_POLICY = environ.get('SECURE_CROSS_ORIGIN_OPENER_POLICY', 'same-origin')
 
 # Set to True to enable server debugging. WARNING: Debugging introduces a substantial performance penalty and may reveal
 # sensitive information about your installation. Only enable debugging while performing testing.
@@ -316,3 +317,4 @@ TIME_FORMAT = environ.get('TIME_FORMAT', 'g:i a')
 SHORT_TIME_FORMAT = environ.get('SHORT_TIME_FORMAT', 'H:i:s')
 DATETIME_FORMAT = environ.get('DATETIME_FORMAT', 'N j, Y g:i a')
 SHORT_DATETIME_FORMAT = environ.get('SHORT_DATETIME_FORMAT', 'Y-m-d H:i')
+
