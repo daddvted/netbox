@@ -77,18 +77,17 @@
 
 FROM 192.168.6.99/devops/netbox:base-1.0
 
-COPY docker/configuration.docker.py /opt/netbox/netbox/netbox/configuration.py
-COPY docker/ldap_config.docker.py /opt/netbox/netbox/netbox/ldap_config.py
+## Copy netbox source code
+COPY netbox /opt/netbox/
+## Copy the modified 'requirements*.txt' files, to have the files actually used during installation
+COPY /requirements.txt /requirements-container.txt /opt/netbox/
+COPY docker/configuration.docker.py /opt/netbox/netbox/configuration.py
+COPY docker/ldap_config.docker.py /opt/netbox/netbox/ldap_config.py
 COPY docker/housekeeping.sh /opt/netbox/housekeeping.sh
 COPY configuration/ /etc/netbox/config/
 COPY patch/export.py /opt/netbox/venv/lib/python3.11/site-packages/django_tables2/export/export.py
 
 WORKDIR /opt/netbox
-
-## Copy netbox source code
-COPY netbox /opt/netbox/
-## Copy the modified 'requirements*.txt' files, to have the files actually used during installation
-COPY /requirements.txt /requirements-container.txt /opt/netbox/
 
 # Must set permissions for '/opt/netbox/netbox/media' directory
 # to g+w so that pictures can be uploaded to netbox.
@@ -107,6 +106,8 @@ ENV LANG=C.utf8 PATH=/opt/netbox/venv/bin:$PATH \
 
 EXPOSE 80
 
-CMD gunicorn --workers ${GUNICORN_WORKER} --threads ${GUNICORN_THREAD} \
-    --capture-output --enable-stdio-inheritance --timeout 90 --log-level debug --daemon netbox.wsgi:application \
-    && exec nginx -g 'daemon off;'
+CMD nginx -g 'daemon on;'; \
+    gunicorn --workers ${GUNICORN_WORKER} --threads ${GUNICORN_THREAD} \
+    # --capture-output --enable-stdio-inheritance --timeout 90 --log-level debug netbox.wsgi:application
+    --capture-output --enable-stdio-inheritance --timeout 90 netbox.wsgi:application
+    #&& exec nginx -g 'daemon off;'

@@ -1,7 +1,7 @@
 {# User login page. Extends base.html directly to override normal UI layout. #}
 {% extends 'base/base.html' %}
 {% load form_helpers %}
-{% load static %}
+{% load static custom_tags %}
 {% load i18n %}
 
 {% block layout %}
@@ -73,7 +73,7 @@
       <div class="col-1 col-md-auto mb-0"></div>
       <div class="col text-end mb-0">
         <small class="text-muted">
-          {{ settings.HOSTNAME }} (v{{ settings.VERSION }})
+          {{ settings.HOSTNAME }} ({% nb_version %})
         </small>
       </div>
     </div>
