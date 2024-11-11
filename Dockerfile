@@ -75,8 +75,9 @@
 ## Copy the modified 'requirements*.txt' files, to have the files actually used during installation
 #COPY --from=builder /requirements.txt /requirements-container.txt /opt/netbox/
 
-FROM 192.168.6.99/devops/netbox:base-1.0
+FROM 192.168.6.99/devops/netbox:base-1.1
 
+COPY nginx.conf /etc/nginx/nginx.conf
 ## Copy netbox source code
 COPY netbox /opt/netbox/
 ## Copy the modified 'requirements*.txt' files, to have the files actually used during installation
