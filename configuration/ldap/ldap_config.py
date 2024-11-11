@@ -2,7 +2,7 @@ from importlib import import_module
 from os import environ
 
 import ldap
-from django_auth_ldap.config import LDAPSearch
+from django_auth_ldap.config import LDAPSearch, GroupOfUniqueNamesType
 
 
 # Read secret from file
@@ -105,6 +105,7 @@ AUTH_LDAP_CACHE_TIMEOUT = int(environ.get('AUTH_LDAP_CACHE_TIMEOUT', 3600))
 
 # Populate the Django user from the LDAP directory.
 AUTH_LDAP_USER_ATTR_MAP = {
+    "username": "uid",
     "first_name": environ.get('AUTH_LDAP_ATTR_FIRSTNAME', 'givenName'),
     "last_name": environ.get('AUTH_LDAP_ATTR_LASTNAME', 'sn'),
     "email": environ.get('AUTH_LDAP_ATTR_MAIL', 'mail')

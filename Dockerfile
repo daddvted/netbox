@@ -103,11 +103,11 @@ ENV LANG=C.utf8 PATH=/opt/netbox/venv/bin:$PATH \
     PORT=8000 \
     GUNICORN_WORKER=8 \
     GUNICORN_THREAD=4
+    GUNICORN_LOG_LEVEL=debug
 
 EXPOSE 80
 
 CMD nginx -g 'daemon on;'; \
     gunicorn --workers ${GUNICORN_WORKER} --threads ${GUNICORN_THREAD} \
-    # --capture-output --enable-stdio-inheritance --timeout 90 --log-level debug netbox.wsgi:application
-    --capture-output --enable-stdio-inheritance --timeout 90 netbox.wsgi:application
+    --capture-output --enable-stdio-inheritance --timeout 90 --log-level ${GUNICORN_LOG_LEVEL} netbox.wsgi:application
     #&& exec nginx -g 'daemon off;'
