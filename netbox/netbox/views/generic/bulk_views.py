@@ -33,7 +33,7 @@ from .utils import get_prerequisite_model
 from virtualization.utils.vmware import sync_vmware
 from virtualization.utils.xen import sync_xen
 from virtualization.utils.kvm import sync_kvm
-from virtualization.utils.util import get_auth_from_comments
+from virtualization.utils.util import get_auth_from_comments, extract_ip
 from virtualization.models import VirtualMachine
 
 __all__ = (
@@ -932,52 +932,69 @@ class BulkSyncVmView(GetReturnURLMixin, BaseMultiObjectView):
                             # VMs for Clusters
                             # By Ted
                             # ====================================
+
                             cluster_type = obj.type.name.lower()
+                            device_count = obj.devices.count()
+                            print(f"🐛 Found {device_count} devices in cluster({obj})")
+                            # logger.info(f"🐛 Found {device_count} devices in cluster({obj})")
 
-                            # Get authentication from comments of cluster
-                            # Format:
-                            #   username
-                            #   password
-                            username, password = get_auth_from_comments(obj.comments)
-                            if not username or not password:
-                                logger.error(f"Username or password not found in comments of cluster {obj.name}")
-                                continue
-                            logger.debug(f"Sync VMs for cluster {obj.name}")
-
-                            if  cluster_type == "vmware":
-                                vms = sync_vmware(obj.name, username, password)
-                            elif  cluster_type == "xen":
-                                vms = sync_xen(obj.name, username, password)
-                            else:
-                                vms = sync_kvm(obj.name, username, password)
-
-                            if len(vms) == 0:
-                                msg = f"Sync {sync_count} {model._meta.verbose_name_plural} failed"
-                                logger.info(msg)
+                            if device_count == 0:
+                                msg = f"{obj.name} 群集中未找到设备"
+                                logger.error(msg)
                                 messages.error(request, msg)
                                 return redirect(self.get_return_url(request))
 
-                            for vm in vms:
-                                vm_in_db = VirtualMachine.objects.restrict(request.user, 'view').filter(cluster=obj, name__contains=vm['name'])
-                                if vm_in_db.count() == 0:
-                                    print(f"VM({vm['name']} not found in DB, add")
 
-                                    vm_instance = VirtualMachine()
-                                    vm_instance.name = vm['name']
-                                    vm_instance.status = vm['status']
-                                    if vm.get('vcpus', 0):
-                                        vm_instance.vcpus = vm['vcpus']
-                                    if vm.get('memory', 0):
-                                        vm_instance.memory = vm['memory']
-                                    vm_instance.cluster = obj
-                                    vm_instance.save()
+                            for device in obj.devices.all():
+                                if not device.name:
+                                    logger.error(f"🐛 IP address not found in device name for device({device}) in cluster({obj}), skip")
+                                    continue
 
+                                device_ip = extract_ip(device.name)
+                            
+                                # Get authentication from comments of cluster
+                                # Format:
+                                #   username: xxxxxx
+                                #   password: yyyyyy
+                                username, password = get_auth_from_comments(device.comments)
+                                if not username or not password:
+                                    logger.error(f"🐛 :Username or password not found in comments of device({device}) in cluster({obj}), skip")
+                                    continue
+
+                                logger.info(f"🐛 Sync VMs for device({device}) in cluster {obj}")
+
+                                if  cluster_type == "vmware":
+                                    vms = sync_vmware(device_ip, username, password)
+                                elif  cluster_type == "xen":
+                                    vms = sync_xen(device_ip, username, password)
                                 else:
-                                    print(f"Found {vm_in_db.count()} VMs in DB by search: {vm['name']}, skip")
+                                    vms = sync_kvm(device_ip, username, password)
 
+                                # if len(vms) == 0:
+                                #     msg = f"Sync {sync_count} {model._meta.verbose_name_plural} failed"
+                                #     logger.info(msg)
+                                #     messages.error(request, msg)
+                                #     return redirect(self.get_return_url(request))
 
+                                for vm in vms:
+                                    vm_in_db = VirtualMachine.objects.restrict(request.user, 'view').filter(cluster=obj, name__contains=vm['name'])
+                                    if vm_in_db.count() == 0:
+                                        logger.debug(f"VM({vm['name']} not found in DB, adding")
 
+                                        vm_instance = VirtualMachine()
+                                        vm_instance.name = vm['name']
+                                        vm_instance.status = vm['status']
+                                        if vm.get('vcpus', 0):
+                                            vm_instance.vcpus = vm['vcpus']
+                                        if vm.get('memory', 0):
+                                            vm_instance.memory = vm['memory']
+                                        vm_instance.cluster = obj
+                                        # Bind vm to device(physical machine)
+                                        vm_instance.device = device
+                                        vm_instance.save()
 
+                                    else:
+                                        logger.info(f"🐛 Found {vm_in_db.count()} VMs in DB by search: {vm['name']}, skip")
 
                 except (ProtectedError, RestrictedError) as e:
                     logger.info(f"Caught {type(e)} while attempting to sychronize cluster objects")

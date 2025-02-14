@@ -32,7 +32,7 @@ def extract_ip(text="") -> str:
         return m.group(0)
     else:
         # return "NO_IP_IN_NAME"
-        return "0.0.0.0"
+        return "127.0.0.1"
 
 
 def convert_size(size_bytes):
@@ -49,10 +49,11 @@ def sort_by_dict_value(l: list) -> list:
 
 
 def get_auth_from_comments(comments: str) -> tuple:
-    li = re.split(r'[\r\n]+',  comments)
-    if len(li) != 2:
+    l = comments.split(',')
+    if len(l) == 2:
+        return l[0], l[1]
+    else:
         return "", ""
-    return li
     
 
 def get_similarity(a: str, b: str) -> float:
