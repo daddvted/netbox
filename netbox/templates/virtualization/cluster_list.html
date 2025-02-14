@@ -4,7 +4,7 @@
 
 {% block bulk_buttons %}
   {{ block.super }}
-  {% if 'bulk_sync_vm' in actions %}
+  {% comment %} {% if 'bulk_sync_vm' in actions %}
     {% bulk_sync_vm_button model query_params=request.GET %}
-  {% endif %}
+  {% endif %} {% endcomment %}
 {% endblock %}
